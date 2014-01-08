@@ -8,6 +8,37 @@
 	border-radius: 15px;
 	box-shadow: 0px 0px 15px #888888;
 	display: none;
+	text-align: center;
+}
+
+.text {
+	width: 400px;
+	margin: auto;
+	margin-top: 50px;
+}
+
+button {
+	width: 100px;
+}
+
+input {
+	margin: auto;
+	text-align: center;
+}
+
+#panel1 {
+	background-color: #E2E3E1;
+}
+
+#name-input {
+	width: 300px;
+	margin-top: 60px;
+	background-color: #E2E3E1;
+}
+
+#age-input {
+	width: 195px;
+	background-color: #E2E3E1;
 }
 
 #bg-image {
