@@ -26,3 +26,8 @@ function getName() {
 		name = (name1.toUpperCase() + name2.toLowerCase());
 	return {userName: name, userAge: age}
 };
+
+function addMyName() {
+	$('#myName').append(getName().userName + "\"");
+	console.log(getName().userName);
+}
