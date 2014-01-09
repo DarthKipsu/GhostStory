@@ -5,7 +5,12 @@ $(document).ready(function() {
 function close1() {
 	$('#panel1').hide();
 	$('#panel2').fadeIn(500);
-	console.log(getName().userName);
+	//console.log(getName().userName);
+};
+
+function close2() {
+	$('#panel2').hide();
+	$('#panel3').fadeIn(500);
 };
 
 // Get name and age info from user
