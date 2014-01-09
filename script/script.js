@@ -2,15 +2,13 @@ $(document).ready(function() {
 	$('#panel1').fadeIn(2000);
 });
 
-function close1() {
-	$('#panel1').hide();
-	$('#panel2').fadeIn(500);
-	//console.log(getName().userName);
-};
-
-function close2() {
-	$('#panel2').hide();
-	$('#panel3').fadeIn(500);
+//Switch to next panel without options
+function switchPanel(closeDiv, openDiv) {
+	var thisPanel = '#panel' + closeDiv;
+		nextPanel = '#panel' + openDiv;
+	console.log(thisPanel);
+	$(thisPanel).hide();
+	$(nextPanel).fadeIn(500);
 };
 
 // Get name and age info from user

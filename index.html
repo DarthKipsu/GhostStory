@@ -13,12 +13,12 @@
 				<p class='text'>Before we start, would you be so kind to give me the name and age of your game character?</p>
 				<input type='text' id='name-input' placeholder='Your name'></input>
 				<input type='text' id='age-input' placeholder='Your age'></input>
-				<button class="small" id="panel1" onclick='close1()'>Begin!</button>
+				<button class="small" onclick='switchPanel(1,2)'>Begin!</button>
 			</div>
 			<div class="story" id="panel2">
 				<p class='text'>It's pitch black outside. Cold, dark, muddy. If you woudn't know better, you could hardly call it a winter. You get home from work, too late again, and hungry. At least it's friday, finally!</p>
 				<p class='text'>As soon as you get settled inside, you feel as something's wrong. You feel like you're not alone - and you're right.</p>
-				<button id="panel2" onclick='close2()'>Look behind you</button>
+				<button onclick='switchPanel(2,3)'>Look behind you</button>
 			</div>
 			<div class="story" id="panel3">
 				<p class='text'>3</p>
