@@ -6,10 +6,16 @@ $(document).ready(function() {
 function switchPanel(closeDiv, openDiv) {
 	var thisPanel = '#panel' + closeDiv;
 		nextPanel = '#panel' + openDiv;
-	console.log(thisPanel);
 	$(thisPanel).hide();
 	$(nextPanel).fadeIn(500);
 };
+
+// For quickly going to desired panel while working with the game
+function quickGoTo(newPanel) {
+	var panel = '#panel' + newPanel;
+	$('.story').hide();
+	$(panel).fadeIn(500);
+}
 
 // Get name and age info from user
 function getName() {

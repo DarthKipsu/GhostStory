@@ -21,8 +21,24 @@
 				<button onclick='switchPanel(2,3)'>Look behind you</button>
 			</div>
 			<div class="story" id="panel3">
-				<p class='text'>3</p>
+				<p class='text'>You see a shape in the back of the living room, as pale as snow. It quivers and sneezes silently, looking at you with timid eyes.</p>
+				<p class='text'>There should be no one in the house except for you and you've never seen this person before in your life anyway. What will you do?</p>
+				<select name="Choose">
+					<option onclick='switchPanel(3,4)'>Shout out of fright</option>
+					<option onclick='switchPanel(3,5)'>Take a broom next to you and try to hit it</option>
+					<option onclick='switchPanel(3,6)'>Ask him if he feels alright</option>
+				</select>
+			</div>
+			<div class="story" id="panel4">
+				<p class='text'>4</p>
+			</div>
+			<div class="story" id="panel5">
+				<p class='text'>5</p>
+			</div>
+			<div class="story" id="panel6">
+				<p class='text'>6</p>
 			</div>
 		</div>
+		<button onclick='quickGoTo(3)'>Back to 3</button>
 	</body>
 </html>

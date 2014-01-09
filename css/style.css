@@ -27,6 +27,11 @@ input {
 	text-align: center;
 }
 
+select {
+	width: 300px;
+	margin-top: 30px;
+}
+
 #panel1 {
 	background-color: #E2E3E1;
 }
