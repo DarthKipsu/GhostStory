@@ -29,5 +29,12 @@ function getName() {
 
 function addMyName() {
 	$('#myName').append(getName().userName + "\"");
-	console.log(getName().userName);
-}
+	$('#myName2').append(getName().userName + "...\"");
+	if (getName().userName === 'Tibbs') {
+		$('#theirName').append('Tibbets?\"');
+		$('#theirName2').prepend('\"Say Tibbets');
+	} else {
+		$('#theirName').append('Tibbs?\"');
+		$('#theirName2').prepend('\"Say Tibbs');
+	}
+};

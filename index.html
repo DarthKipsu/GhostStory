@@ -54,7 +54,12 @@
 				</select>
 			</div>
 			<div class="story" id="panel8">
-				<p class='text'>A spectre?</p>
+				<p class='text'>"Yes, spectres have the first choice on houses, but he thought your place was low and you had such a bad wine, he left the third day," the ghost explained.</p>
+				<p class='text'>"Then after the spectre has left, a phantom will visit the house. That's me. And if I leave, a gobling, then an elf and lastly a ghoul is nothing else is left."</p>
+				<select class="no-margin">
+					<option onclick='switchPanel(8,8)'>"What do you mean my place is low?"</option>
+					<option onclick='switchPanel(8,9)'>"Well, you're not a very scary phantom."</option>
+				</select>
 			</div>
 			<div class="story" id="panel9">
 				<p class='text'>"No?" he looks around in mistrust. "I would think you'd notice somethig like a spectre in the house. Are you sure?"</p>
@@ -64,13 +69,34 @@
 				</select>
 			</div>
 			<div class="story" id="panel10">
-				<p class='text'>As sure as my name is</p>
+				<p class='text' id="myName2">"Oh...." He sounded confused. "If your name is </p>
+				<p class='text'>He kept a long pause.</p>
+				<p class='text' id="theirName">"I'm on a wrong house, am I! Are you sure you're name isn't </p>
+				<button onclick='switchPanel(10,12)'>"Pretty sure, yeah."</button>
 			</div>
-			<div class="story" id="panel10">
-				<p class='text'>Unless spectres are hard to miss!</p>
+			<div class="story" id="panel11">
+				<p class='text'>"No, spectres are the high class of fiends. You would have been scared if a spectre was here," he assured.</p>
+				<p class='text'>"I can truthfully say, I haven't noticed anything," you say, doubting if the ghost knew anything off what he was talking about. He starts to glide around looking at the house more precisely.</p>
+				<button onclick='switchPanel(11,14)'>Follow the ghost</button>
 			</div>
-			<div class="story" id="panel10">
-				<p class='text'>12</p>
+			<div class="story" id="panel12">
+				<p class='text'>"Well then, how come you didn't say so earlier?" the ghost replied with frustration in his voice. "I've been here for nothing!"</p>
+				<p class='text'>"You never asked my name!" you shout.</p>
+				<p class='text'>He looks at you with wary eyes, "you are right. My apologies. I must be on my way now, maybe they will send you a better sprite to hount you so you'll be in constant fright. Good night!"</p>
+				<button onclick='switchPanel(12,13)'>You watch the ghost dissappear</button>
+			</div>
+			<div class="story" id="panel13">
+				<p class='text'>Though the friendly ghost has often been in your mind, you haven't been visited by any kind of ghost, sprite, or poltergeist. since.</p>
+				<p class='text'>You wonder if it was all just a dream...</p>
+				<button onclick='window.location.reload()'>Go again!</button>
+			</div>
+			<div class="story" id="panel14">
+				<p class='text'>"There doesn't seem to be much wrong with this house," he mutters. "It's like a spectre was never here, as you say."</p>
+				<p class='text'>"Told you so," you reply, feeling relieved.</p>
+				<p class='text' id="theirName2">, how old is this house?" he asks.</p>
+			</div>
+			<div class="story" id="panel15">
+				<p class='text'>15</p>
 			</div>
 		</div>
 		<button onclick='quickGoTo(7)'>Back to 7</button>
