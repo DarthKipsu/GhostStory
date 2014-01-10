@@ -28,7 +28,7 @@ function getName() {
 };
 
 function addMyName() {
-	$('#myName').append(getName().userName + "\"");
+	$('.myName').append(getName().userName + "\"");
 	$('#myName2').append(getName().userName + "...\"");
 	if (getName().userName === 'Tibbs') {
 		$('#theirName').append('Tibbets?\"');
