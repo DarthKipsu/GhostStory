@@ -102,13 +102,43 @@
 				<p class='text'>"No I certainly don't!" you exclaim. "Have you been loosening screws here while I've been at work?"</p>
 				<p class='text'>"I have not, that would've been unpolite."</p>
 				<p class='text'>Believe him? 
-				<button class="small" onclick='switchPanel(15,15)'>Yes</button> 
+				<button class="small" onclick='switchPanel(15,16)'>Yes</button> 
 				<button class="small" onclick='switchPanel(15,15)'>No</button></p>
 			</div>
 			<div class="story" id="panel16">
-				<p class='text'>16</p>
+				<p class='text'>"Fine. Eveything seems to be in condition, but if I'll find something has got worn out..." you really have no idea what you could do in that situation. Against a ghost.</p>
+				<p class='text'>"It's not, I assure you," he defended himself. "I should have left when you were late but it's raining so hard, I waited, by Knight-Mayor's permission of course."</p>
+				<button onclick='switchPanel(16,17)'>"Knight-Mayor? Who's that?"</button> 
+			</div>
+			<div class="story" id="panel17">
+				<p class='text'>"You must know him, his very popular these days," the ghost explained. "His the one who sits on people at night and pinches and pokes their stomach after they have eaten too much."</p>
+				<p class='text'>"Popular. That's one way to put it," you raise your eyebrows.</p>
+				<select>
+					<option onclick='switchPanel(17,18)'>You'll feeling hungry, offer the ghost some food</option>
+					<option onclick='switchPanel(17,17)'>Continue listening to the sotry</option>
+				</select>
+			</div>
+			<div class="story" id="panel18">
+				<p class='text'>"Talking about food, I'm starving," you sigh looking how late it is. "How about I fix us something to eat... Or how does it work with ghosts? Can you eat?"</p>
+				<p class='text'>"Oh yes! Indeed we phantoms love eating!" he says, excited.</p>
+				<button onclick='switchPanel(18,19)'>Cook some duck and peas for both of you</button> 
+			</div>
+			<div class="story" id="panel19">
+				<p class='text'>"Thank you for the food, despite the fact it wasn't all that delicious," he says afterwards.</p>
+				<p class='text'>"You know, you're one of a kind in arrogance," you smirk while collectig the plates.</p>
+				<p class='text'>"I'm sorry but I can see why the spectre left. You really should get better wine!" the phantom recommends, adding "and some sort of flavoring is usually used in dishes!"</p>
+				<button onclick='switchPanel(19,20)'>"You're welcomed..."</button> 
+			</div>
+			<div class="story" id="panel20">
+				<p class='text'>"I can see my welcome has expired, it's allright, in any case I must be on my way," he says and gets up while pouring himself one last glass of the bad wine you were serving him.</p>
+				<p class='text'>"Will I be seeing goblins next?" you ask feeling annoyed and a bit scared on what follows.</p>
+				<p class='text'>"Who knows. It's been nice to chat with you though," he grants. "Either way, good night!"</p>
+				<button onclick='switchPanel(20,13)'>You watch the ghost dissappear</button>
+			</div>
+			<div class="story" id="panel21">
+				<p class='text'>21</p>
 			</div>
 		</div>
-		<button onclick='quickGoTo(8)'>Back to 8</button>
+		<button onclick='quickGoTo(19)'>Back to 19</button>
 	</body>
 </html>
