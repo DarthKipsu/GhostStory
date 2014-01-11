@@ -33,8 +33,10 @@ function addMyName() {
 	if (getName().userName === 'Tibbs') {
 		$('#theirName').append('Tibbets?\"');
 		$('#theirName2').prepend('\"Say Tibbets');
+		$('#theirName3').prepend('Tibbets');
 	} else {
 		$('#theirName').append('Tibbs?\"');
 		$('#theirName2').prepend('\"Say Tibbs');
+		$('#theirName3').prepend('Tibbs');
 	}
 };

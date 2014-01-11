@@ -115,7 +115,7 @@
 				<p class='text'>"Popular. That's one way to put it," you raise your eyebrows.</p>
 				<select>
 					<option onclick='switchPanel(17,18)'>You'll feeling hungry, offer the ghost some food</option>
-					<option onclick='switchPanel(17,17)'>Continue listening to the sotry</option>
+					<option onclick='switchPanel(17,21)'>Continue listening to the story</option>
 				</select>
 			</div>
 			<div class="story" id="panel18">
@@ -136,9 +136,15 @@
 				<button onclick='switchPanel(20,13)'>You watch the ghost dissappear</button>
 			</div>
 			<div class="story" id="panel21">
-				<p class='text'>21</p>
+				<p class='text'>"The Mayor's extremely fat, which suits his job well," he reasons. "When he was elected mayor he ran in exitment to the King, and for that effort, for such a big figure, the King knighted him on the spot!"</p>
+				<p class='text'>"What a stroke of wit!" you rejoice.</p>
+				<p class='text'>"It  was <span id="theirName3"></span>, wasn't it!" he replies. "And wouldn't you have done the same?"</p>
+				<button onclick='switchPanel(21,10)' class="myName">"Sure, but my name is </button>
+			</div>
+			<div class="story" id="panel22">
+				<p class='text'>22</p>
 			</div>
 		</div>
-		<button onclick='quickGoTo(19)'>Back to 19</button>
+		<button onclick='quickGoTo(17)'>Back to 17</button>
 	</body>
 </html>
