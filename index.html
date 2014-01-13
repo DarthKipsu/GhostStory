@@ -58,8 +58,7 @@
 				<p class='text'>"Then after the spectre has left, a phantom will visit the house. That's me. And if I leave, a gobling, then an elf and lastly a ghoul, if nothing else is left."</p>
 				<select class="no-margin">
 					<option onclick='switchPanel(8,15)'>"What do you mean my place is low?"</option>
-					<option onclick='switchPanel(8,8)'>"Well, you're not a very scary phantom."</option>
-					<option onclick='switchPanel(8,8)'>"There will be no goblins or elves in my house!"</option>
+					<option onclick='switchPanel(8,23)'>"There will be no goblins or elves in my house!"</option>
 				</select>
 			</div>
 			<div class="story" id="panel9">
@@ -103,7 +102,7 @@
 				<p class='text'>"I have not, that would've been unpolite."</p>
 				<p class='text'>Believe him? 
 				<button class="small" onclick='switchPanel(15,16)'>Yes</button> 
-				<button class="small" onclick='switchPanel(15,15)'>No</button></p>
+				<button class="small" onclick='switchPanel(15,22)'>No</button></p>
 			</div>
 			<div class="story" id="panel16">
 				<p class='text'>"Fine. Eveything seems to be in condition, but if I'll find something has got worn out..." you really have no idea what you could do in that situation. Against a ghost.</p>
@@ -142,9 +141,45 @@
 				<button onclick='switchPanel(21,10)' class="myName">"Sure, but my name is </button>
 			</div>
 			<div class="story" id="panel22">
-				<p class='text'>22</p>
+				<p class='text'>"Like you haven't!" you feel frustrated. "What else would you have done here? Admire my books collection?"</p>
+				<p class='text'>"I haven't touched anything, certainly not your books! I assure you," he defended himself. "I should have left when you were late but it's raining so hard, I waited, by Knight-Mayor's permission of course."</p>
+				<button onclick='switchPanel(22,17)'>"Knight-Mayor? Who's that?"</button> 
+			</div>
+			<div class="story" id="panel23">
+				<p class='text'>"Whether we ghosts stay or leave depends on circumstances, as with spectres, though we can't be as picky," he sighs.</p>
+				<p class='text'>"You're like the middle class of demons?"</p>
+				<p class='text'>"Eh, not exactly. But I do wish I would have born as a spectre," he said pensive.</p>
+				<button onclick='switchPanel(23,24)'>"Don't we all."</button>
+			</div>
+			<div class="story" id="panel24">
+				<p class='text'>"So there's no chance I could have my house, like... back?" you ask. "Like no haunting of any kind?"</p>
+				<p class='text'>"Well we can't just leave a house alone if the subject asks," he thinks about it for a moment. "This is always done in villas, however cheap. We get our assignments then we might move on, but the practice has to be maintained."</p>
+				<select class="no-margin">
+					<option onclick='switchPanel(24,15)'>"First you call the house low, now cheap?"</option>
+					<option onclick='switchPanel(24,25)'>"But not all villas are haunted!"</option>
+				</select>
+			</div>
+			<div class="story" id="panel25">
+				<p class='text'>"Some phantoms are less effective than others," the ghost explained. "And not all are so interested in talking to humans at all."</p>
+				<p class='text'>"I wouldn't mind that kind of ghost..." you say. "Though maybe I'm just too hungry and tired for this today."</p>
+				<p class='text'>"I'm hungry aswell, maybe we could fix us something to eat?"</p>
+				<select class="no-margin">
+					<option onclick='switchPanel(25,19)'>Cook something for the both of you</option>
+					<option onclick='switchPanel(25,26)'>"I'll cook you if you promise no more haunting here."</option>
+				</select>
+			</div>
+			<div class="story" id="panel26">
+				<p class='text'>"It's not really up to me as I said," he says regretting.</p>
+				<p class='text'>"I'm sure an influential ghost like yourself can work something out..." you entice.</p>
+				<p class='text'>"I can't promise you anything," he says.</p>
+				<button onclick='switchPanel(26,27)'>Cook him something anyway</button>
+			</div>
+			<div class="story" id="panel27">
+				<p class='text'>"It wasn' that bad and I could sure spend some more time here cattering, but I think I must be going," he says after the dinner.</p>
+				<p class='text'>"I guess ghosts have schedules to keep up with aswell."</p>
+				<p class='text'>"Indeed, good night my friend!" he says and nods.</p>
+				<button onclick='switchPanel(27,13)'>You watch the ghost dissappear</button>
 			</div>
 		</div>
-		<button onclick='quickGoTo(17)'>Back to 17</button>
 	</body>
 </html>
