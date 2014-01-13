@@ -64,3 +64,12 @@ select {
 .no-margin {
 	margin: 0;
 }
+
+.riddle {
+	margin-top: 25px;
+	width: 300px;
+}
+
+.riddle-button {
+	width: 306px;
+}

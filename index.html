@@ -43,6 +43,7 @@
 				<p class='text'>"Are you alright?" you ask the little man.</p>
 				<p class='text'>You take a closer look and notice you can see through him if you try. White, wavy and transparent. Can it be?</p>
 				<p class='text'>"Oh, I'm sorry. I must have catched a cold coming down here" he says quietly, lurking in the shadows.</p>
+				<button onclick='switchPanel(6,28)'>"Come on out, don't just shiver there!"</button>
 			</div>
 			<div class="story" id="panel7">
 				<p class='text'>"It's allright to get alarmed the first time you meet your house ghost after all," he said.</p>
@@ -180,6 +181,44 @@
 				<p class='text'>"Indeed, good night my friend!" he says and nods.</p>
 				<button onclick='switchPanel(27,13)'>You watch the ghost dissappear</button>
 			</div>
+			<div class="story" id="panel28">
+				<p class='text'>"I'd rather not," he says timidly. "For phantoms have just as good reason being afraid of light, as men have to fear the dark."</p>
+				<p class='text'>"So no reason at all," you reply  smiling kindly.</p>
+				<p class='text'>"I'm not very good at this domestic haunting, am I..." he ponders. "I'm sorry, for it's my first assignment of this kind."</p>
+				<button onclick='switchPanel(28,29)'>"Then what are you good at?"</button>
+			</div>
+			<div class="story" id="panel29">
+				<p class='text'>"I've been haunting in deserted castles and caverns!" he says proudly.</p>
+				<p class='text'>"Must have been lonely jobs?" you ask.</p>
+				<p class='text'>"Not at all for there's been other ghosts and sprites," he explains. "I've actually trained to be quite good at riddles! Want to play?"</p>
+				<button onclick='switchPanel(29,30)'>Sure! Play a game of riddles with the ghost</button>
+			</div>
+			<div class="story" id="panel30">
+				<p class='text'>"Best of three to win?" he asks.</p>
+				<p class='text'>"Sounds fair."</p>
+				<p class='text'>"I'll start, but I'll go easy to see your level," he grants. "Are you ready?"</p>
+				<button onclick='switchPanel(30,31)'>"I'm ready!"</button>
+			</div>
+			<div class="story" id="panel31">
+				<p class='text'>"What has a bed, but never sleeps."</p>
+				<p class='text'>"Can run, but can never walk."</p>
+				<p class='text'>"Has a bank but doesn't own a cent?"</p>
+				<input type="text" class="riddle" id="first">
+				<button class="riddle-button" onclick='firstRiddle()'>Submit your answer</button>
+			</div>
+			<div class="story" id="panel32">
+				<p class='text'>RIGHT!</p>
+			</div>
+			<div class="story" id="panel33">
+				<p class='text'>WRONG!</p>
+			</div>
+			<div class="story" id="panel34">
+				<p class='text'>Close, but not quite!</p>
+			</div>
+			<div class="story" id="panel35">
+				<p class='text'>35</p>
+			</div>
 		</div>
+		<button onclick='quickGoTo(31)'>Back to 31</button>
 	</body>
 </html>

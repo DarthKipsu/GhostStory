@@ -40,3 +40,22 @@ function addMyName() {
 		$('#theirName3').prepend('Tibbs');
 	}
 };
+
+function firstRiddle() {
+	var firstArray = ['river', 'a river', 'brook', 'a brook', 'stream', 'a stream', 'current', 'a current', 'creek', 'a creek']
+	var firstCloseArray = ['water', 'a water', 'waterbed', 'aqua']
+	var answer = document.getElementById('first').value;
+		answer = answer.toLowerCase();
+		correct = firstArray.indexOf(answer);
+		close = firstCloseArray.indexOf(answer);
+	if (correct >= 0) {
+		$('#panel31').hide();
+		$('#panel32').fadeIn(500);
+	} else if (close >= 0) {
+		$('#panel31').hide();
+		$('#panel34').fadeIn(500);
+	} else {
+		$('#panel31').hide();
+		$('#panel33').fadeIn(500);
+	}
+};
