@@ -52,6 +52,8 @@ function firstRiddle() {
 		correct = firstArray.indexOf(answer);
 		close = firstCloseArray.indexOf(answer);
 	$('#panel31').hide();
+	userScore = 0;
+	ghostScore = 0;
 	if (correct >= 0) {
 		$('#panel32').fadeIn(500);
 		$('#first-answer').append(answer);
@@ -77,4 +79,13 @@ function firstGhostScore(selection) {
 	}
 	console.log('user: ' + userScore);
 	console.log('ghost: ' + ghostScore);
-}
+};
+
+function toSecondRiddle() {
+	$('.story').hide();
+	if (userScore == 1) {
+		$('#panel38').fadeIn(500);
+	} else {
+		$('#panel39').fadeIn(500);
+	}
+};
