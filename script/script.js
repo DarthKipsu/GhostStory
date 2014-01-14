@@ -41,6 +41,9 @@ function addMyName() {
 	}
 };
 
+var userScore = 0;
+var ghostScore = 0;
+
 function firstRiddle() {
 	var firstArray = ['river', 'a river', 'brook', 'a brook', 'stream', 'a stream', 'current', 'a current', 'creek', 'a creek']
 	var firstCloseArray = ['water', 'a water', 'waterbed', 'aqua']
@@ -48,14 +51,30 @@ function firstRiddle() {
 		answer = answer.toLowerCase();
 		correct = firstArray.indexOf(answer);
 		close = firstCloseArray.indexOf(answer);
+	$('#panel31').hide();
 	if (correct >= 0) {
-		$('#panel31').hide();
 		$('#panel32').fadeIn(500);
+		$('#first-answer').append(answer);
+		userScore += 1;
 	} else if (close >= 0) {
-		$('#panel31').hide();
 		$('#panel34').fadeIn(500);
+		userScore += 1;
 	} else {
-		$('#panel31').hide();
 		$('#panel33').fadeIn(500);
 	}
 };
+
+function firstGhostScore(selection) {
+	$('.story').hide();
+	if (selection == 1) {
+		$('#panel35').fadeIn(500);
+		ghostScore += 1;
+	} else if (selection == 2) {
+		$('#panel36').fadeIn(500);
+	} else {
+		$('#panel37').fadeIn(500);
+		ghostScore += 1;
+	}
+	console.log('user: ' + userScore);
+	console.log('ghost: ' + ghostScore);
+}

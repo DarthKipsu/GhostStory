@@ -207,16 +207,44 @@
 				<button class="riddle-button" onclick='firstRiddle()'>Submit your answer</button>
 			</div>
 			<div class="story" id="panel32">
-				<p class='text'>RIGHT!</p>
+				<p class='text'>"Well guessed! It was <span id="first-answer"></span>," he said, evaluating if it was a good guess or were you just better a this game than you let know.</p>
+				<p class='text'>"Now it's your turn. Remember, no cheating!"</p>
+				<p class='text'>You think about it a bit. You haven't practiced the game like the ghost, so it takes a bit more effort from you.</p>
+				<select class="no-margin">
+					<option onclick='firstGhostScore(1)'>"What type of cheese is made backwards?"</option>
+					<option onclick='firstGhostScore(2)'>"What kind of room has no doors or windows?"</option>
+					<option onclick='firstGhostScore(3)'>"What word is shorter when you add two letters to it?"</option>
+				</select>
 			</div>
 			<div class="story" id="panel33">
-				<p class='text'>WRONG!</p>
+				<p class='text'>"Well, you didn't get it this time..." he says, feeling kind of happy about it. "I'll go easier next time, but now it's your turn!"</p>
+				<p class='text'>You think about it a bit. You haven't practiced the game like the ghost, so it takes a bit more effort from you.</p>
+				<select>
+					<option onclick='firstGhostScore(1)'>"What type of cheese is made backwards?"</option>
+					<option onclick='firstGhostScore(2)'>"What kind of room has no doors or windows?"</option>
+					<option onclick='firstGhostScore(3)'>"What word is shorter when you add two letters to it?"</option>
+				</select>
 			</div>
 			<div class="story" id="panel34">
-				<p class='text'>Close, but not quite!</p>
+				<p class='text'>"Close! The real answer was a river..." he thinks about it a bit and smiles friendly. "Since this was your first try and you allmost got it, let's count a point for you, allright?"</p>
+				<p class='text'>"Suits for me! Now it's my turn..." you think about it a bit. You haven't practiced the game like the ghost, so it takes a bit more effort from you.</p>
+				<select class="no-margin">
+					<option onclick='firstGhostScore(1)'>"What type of cheese is made backwards?"</option>
+					<option onclick='firstGhostScore(2)'>"What kind of room has no doors or windows?"</option>
+					<option onclick='firstGhostScore(3)'>"What word is shorter when you add two letters to it?"</option>
+				</select>
 			</div>
 			<div class="story" id="panel35">
-				<p class='text'>35</p>
+				<p class='text'>EDAM</p>
+			</div>
+			<div class="story" id="panel36">
+				<p class='text'>MUSHROOM</p>
+			</div>
+			<div class="story" id="panel37">
+				<p class='text'>SHORT</p>
+			</div>
+			<div class="story" id="panel38">
+				<p class='text'>38</p>
 			</div>
 		</div>
 		<button onclick='quickGoTo(31)'>Back to 31</button>
