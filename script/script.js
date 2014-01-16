@@ -45,10 +45,10 @@ var userScore = 0;
 var ghostScore = 0;
 
 function firstRiddle() {
-	var firstArray = ['river', 'a river', 'brook', 'a brook', 'stream', 'a stream', 'current', 'a current', 'creek', 'a creek']
-	var firstCloseArray = ['water', 'a water', 'waterbed', 'aqua']
+	var firstArray = ['river', 'brook', 'stream', 'current', 'creek'];
+	var firstCloseArray = ['water', 'waterbed', 'aqua'];
 	var answer = document.getElementById('first').value;
-		answer = answer.toLowerCase();
+		answer = answer.trim().toLowerCase().replace('a ','').replace('an ','');
 		correct = firstArray.indexOf(answer);
 		close = firstCloseArray.indexOf(answer);
 	$('#panel31').hide();
@@ -87,5 +87,43 @@ function toSecondRiddle() {
 		$('#panel38').fadeIn(500);
 	} else {
 		$('#panel39').fadeIn(500);
+	}
+};
+
+function secondRiddle() {
+	var secondArray = ['tombstone', 'gravestone', 'burialstone'];
+	var secondCloseArray = ['grave', 'tomb', 'burial'];
+	var answer = document.getElementById('second').value;
+		answer = answer.trim().toLowerCase().replace('a ','').replace('an ','');
+		correct = secondArray.indexOf(answer);
+		close = secondCloseArray.indexOf(answer);
+	$('#panel38').hide();
+	if (correct >= 0) {
+		$('#panel40').fadeIn(500);
+		userScore += 1;
+	} else if (close >= 0) {
+		if (ghostScore == 1) {
+			$('#panel41').fadeIn(500);
+			userScore += 1;
+			$('.second-answer').append(answer);
+		} else {
+			$('#panel42').fadeIn(500);
+		}
+	} else {
+		$('#panel43').fadeIn(500);
+	}
+};
+
+function thirdRiddle() {
+	var thirdArray = ['fish'];
+	var answer = document.getElementById('third').value;
+		answer = answer.trim().toLowerCase().replace('a ','').replace('an ','');
+		correct = thirdArray.indexOf(answer);
+	$('#panel39').hide();
+	if (correct >= 0) {
+		$('#panel44').fadeIn(500);
+		userScore += 1;
+	} else {
+		$('#panel45').fadeIn(500);
 	}
 };

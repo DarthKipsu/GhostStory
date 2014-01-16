@@ -200,9 +200,10 @@
 				<button onclick='switchPanel(30,31)'>"I'm ready!"</button>
 			</div>
 			<div class="story" id="panel31">
-				<p class='text'>"What has a bed, but never sleeps."</p>
-				<p class='text'>"Can run, but can never walk."</p>
-				<p class='text'>"Has a bank but doesn't own a cent?"</p>
+				<p class='text'>"What can run but never walks."</p>
+				<p class='text'>"Has a mouth but never talks."</p>
+				<p class='text'>"Has a bed but never sleeps."</p>
+				<p class='text'>"Has a head but never weeps?"</p>
 				<input type="text" class="riddle" id="first">
 				<button class="riddle-button" onclick='firstRiddle()'>Submit your answer</button>
 			</div>
@@ -241,7 +242,7 @@
 				<button onclick='toSecondRiddle()'>"I'm ready!"</button>
 			</div>
 			<div class="story" id="panel36">
-				<p class='text'>"...a dungeon?" he asks with hesitation.</p>
+				<p class='text'>"...a cellar?" he asks with hesitation.</p>
 				<p class='text'>"It's a mushroom," you tell him. "Better luck next time?"</p>
 				<p class='text'>"A mushroom! Of course, how stupid of me..." he frets. "Well, I must be sharper next time. The game isn't lost yet! Are you ready for your riddle?"</p>
 				<button onclick='toSecondRiddle()'>"I'm ready!"</button>
@@ -253,13 +254,54 @@
 				<button onclick='toSecondRiddle()'>"I'm ready!"</button>
 			</div>
 			<div class="story" id="panel38">
-				<p class='text'>more difficult riddle</p>
+				<p class='text'>"I have a name that's not mine."</p>
+				<p class='text'>"No one cares about me in their prime."</p>
+				<p class='text'>"But ultimately lie by me all day and night."</p>
+				<p class='text'>"What am I?"</p>
+				<input type="text" class="riddle" id="second">
+				<button class="riddle-button" onclick='secondRiddle()'>Submit your answer</button>
 			</div>
 			<div class="story" id="panel39">
-				<p class='text'>easy riddle</p>
+				<p class='text'>"What's alive without breath."</p>
+				<p class='text'>"As cold as death."</p>
+				<p class='text'>"Never thirsty, ever drinking."</p>
+				<p class='text'>"All in mail never clinking?"</p>
+				<input type="text" class="riddle" id="third">
+				<button class="riddle-button" onclick='thirdRiddle()'>Submit your answer</button>
 			</div>
 			<div class="story" id="panel40">
-				<p class='text'>40</p>
+				<p class='text'>"You're quite good at this!" he says. "You're right, it's two out of three for you now. I see I need to raise the level here!"</p>
+				<p class='text'>"Well, you still have a chance too!" you console, feeling happy of your success. "Now, it's my turn again!"</p>
+				<select>
+					<option onclick='secondGhostScore(1)'>"How can you make 7 even?"</option>
+					<option onclick='secondGhostScore(2)'>"What do you put on a table and cut, but never eat?"</option>
+					<option onclick='secondGhostScore(3)'>"The shorter I am, the bigger I am. What am I?"</option>
+				</select>
+			</div>
+			<div class="story" id="panel41">
+				<p class='text'>"Well..." he twists his mouth. "I guess it's close enough we can say it was right?"</p>
+				<p class='text'>"What was the right answer?" you ask.</p>
+				<p class='text'>"A <span class="second-answer"></span>stone, instead of just <span class="second-answer"></span>... But I'll accept it, to keep things interesting! Now it's your turn again!"</p>
+				<select>
+					<option onclick='secondGhostScore(1)'>"How can you make 7 even?"</option>
+					<option onclick='secondGhostScore(2)'>"What do you put on a table and cut, but never eat?"</option>
+					<option onclick='secondGhostScore(3)'>"The shorter I am, the bigger I am. What am I?"</option>
+				</select>
+			</div>
+			<div class="story" id="panel42">
+				<p class='text'>2 close don't add point</p>
+			</div>
+			<div class="story" id="panel43">
+				<p class='text'>2 wrong</p>
+			</div>
+			<div class="story" id="panel44">
+				<p class='text'>"Indeed!" he rejoices.</p>
+			</div>
+			<div class="story" id="panel45">
+				<p class='text'>3 wrong</p>
+			</div>
+			<div class="story" id="panel46">
+				<p class='text'>46</p>
 			</div>
 		</div>
 		<button onclick='quickGoTo(31)'>Back to 31</button>
