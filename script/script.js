@@ -98,6 +98,7 @@ function secondRiddle() {
 		correct = secondArray.indexOf(answer);
 		close = secondCloseArray.indexOf(answer);
 	$('#panel38').hide();
+	$('.second-answer').append(answer);
 	if (correct >= 0) {
 		$('#panel40').fadeIn(500);
 		userScore += 1;
@@ -105,7 +106,6 @@ function secondRiddle() {
 		if (ghostScore == 1) {
 			$('#panel41').fadeIn(500);
 			userScore += 1;
-			$('.second-answer').append(answer);
 		} else {
 			$('#panel42').fadeIn(500);
 		}
@@ -125,5 +125,33 @@ function thirdRiddle() {
 		userScore += 1;
 	} else {
 		$('#panel45').fadeIn(500);
+	}
+};
+
+function secondGS(selection) {
+	$('.story').hide();
+	if (selection == 1) {
+		$('#panel46').fadeIn(500);
+		ghostScore += 1;
+	} else if (selection == 2) {
+		if (ghostScore + userScore == 0) {
+			$('#panel49').fadeIn(500);
+		} else {
+			$('#panel47').fadeIn(500);
+		}
+	} else {
+		$('#panel48').fadeIn(500);
+		ghostScore += 1;
+	}
+	console.log('user: ' + userScore);
+	console.log('ghost: ' + ghostScore);
+};
+
+function toFourthRiddle() {
+	$('.story').hide();
+	if (userScore == 2) {
+		$('#panel50').fadeIn(500);
+	} else {
+		$('#panel51').fadeIn(500);
 	}
 };

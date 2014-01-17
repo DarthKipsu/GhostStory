@@ -196,8 +196,8 @@
 			<div class="story" id="panel30">
 				<p class='text'>"Best of three to win?" he asks.</p>
 				<p class='text'>"Sounds fair."</p>
-				<p class='text'>"I'll start, but I'll go easy to see your level," he grants. "Are you ready?"</p>
-				<button onclick='switchPanel(30,31)'>"I'm ready!"</button>
+				<p class='text'>"I'll start, but I'll go easy to see your level," he grants. "Write down only your answer. Are you ready?"</p>
+				<button onclick='switchPanel(30,31)'>"Yes. I'm ready!"</button>
 			</div>
 			<div class="story" id="panel31">
 				<p class='text'>"What can run but never walks."</p>
@@ -271,11 +271,11 @@
 			</div>
 			<div class="story" id="panel40">
 				<p class='text'>"You're quite good at this!" he says. "You're right, it's two out of three for you now. I see I need to raise the level here!"</p>
-				<p class='text'>"Well, you still have a chance too!" you console, feeling happy of your success. "Now, it's my turn again!"</p>
+				<p class='text'>"Well, you still have a chance too!" you console, feeling happy about your success. "Now, it's my turn again!"</p>
 				<select>
-					<option onclick='secondGhostScore(1)'>"How can you make 7 even?"</option>
-					<option onclick='secondGhostScore(2)'>"What do you put on a table and cut, but never eat?"</option>
-					<option onclick='secondGhostScore(3)'>"The shorter I am, the bigger I am. What am I?"</option>
+					<option onclick='secondGS(1)'>"How can you make 7 even?"</option>
+					<option onclick='secondGS(2)'>"What do you put on a table and cut, but never eat?"</option>
+					<option onclick='secondGS(3)'>"The shorter I am, the bigger I am. What am I?"</option>
 				</select>
 			</div>
 			<div class="story" id="panel41">
@@ -283,25 +283,83 @@
 				<p class='text'>"What was the right answer?" you ask.</p>
 				<p class='text'>"A <span class="second-answer"></span>stone, instead of just <span class="second-answer"></span>... But I'll accept it, to keep things interesting! Now it's your turn again!"</p>
 				<select>
-					<option onclick='secondGhostScore(1)'>"How can you make 7 even?"</option>
-					<option onclick='secondGhostScore(2)'>"What do you put on a table and cut, but never eat?"</option>
-					<option onclick='secondGhostScore(3)'>"The shorter I am, the bigger I am. What am I?"</option>
+					<option onclick='secondGS(1)'>"How can you make 7 even?"</option>
+					<option onclick='secondGS(2)'>"What do you put on a table and cut, but never eat?"</option>
+					<option onclick='secondGS(3)'>"The shorter I am, the bigger I am. What am I?"</option>
 				</select>
 			</div>
 			<div class="story" id="panel42">
-				<p class='text'>2 close don't add point</p>
+				<p class='text'>"You're close allright..." he says. "But you lie in a <span class="second-answer"></span>, not by it, nor does it have a name written on it. The right answer would have been a <span class="second-answer"></span>stone."</p>
+				<p class='text'>"Allmost the same!" you defend.</p>
+				<p class='text'>"Yes, but still not the same thing, so no points for you either this round. Now it's your turn again, I believe."</p>
+				<select class="no-margin">
+					<option onclick='secondGS(1)'>"How can you make 7 even?"</option>
+					<option onclick='secondGS(2)'>"What do you put on a table and cut, but never eat?"</option>
+					<option onclick='secondGS(3)'>"The shorter I am, the bigger I am. What am I?"</option>
+				</select>
 			</div>
 			<div class="story" id="panel43">
-				<p class='text'>2 wrong</p>
+				<p class='text'>"Oh, the right answer would have been a tombstone!" he tells you. "It has your name and when you're dead you lie under it."</p>
+				<p class='text'>"Unless I become a ghost like you, that is," you figure out.</p>
+				<p class='text'>"Well yeah, but your body still stays there. Anyway, let's not waste any more time, it's my turn to guess!"</p>
+				<select class="no-margin">
+					<option onclick='secondGS(1)'>"How can you make 7 even?"</option>
+					<option onclick='secondGS(2)'>"What do you put on a table and cut, but never eat?"</option>
+					<option onclick='secondGS(3)'>"The shorter I am, the bigger I am. What am I?"</option>
+				</select>
 			</div>
 			<div class="story" id="panel44">
 				<p class='text'>"Indeed!" he rejoices.</p>
+				<p class='text'>"That was really easy, I've watched my share of popular culture," you tell him.</p>
+				<p class='text'>"Yeah but I guess you haven't read it, anyhow, it's your turn to ask a riddle."</p>
+				<select>
+					<option onclick='secondGS(1)'>"How can you make 7 even?"</option>
+					<option onclick='secondGS(2)'>"What do you put on a table and cut, but never eat?"</option>
+					<option onclick='secondGS(3)'>"The shorter I am, the bigger I am. What am I?"</option>
+				</select>
 			</div>
 			<div class="story" id="panel45">
-				<p class='text'>3 wrong</p>
+				<p class='text'>"No. It's a fish," he tells you. "You thought this one was difficult aswell?"</p>
+				<p class='text'>"I haven't played word games a lot."</p>
+				<p class='text'>"Allright, I'l try to come up with something even more simple next round," he says. "Now it's your turn."</p>
+				<select>
+					<option onclick='secondGS(1)'>"How can you make 7 even?"</option>
+					<option onclick='secondGS(2)'>"What do you put on a table and cut, but never eat?"</option>
+					<option onclick='secondGS(3)'>"The shorter I am, the bigger I am. What am I?"</option>
+				</select>
 			</div>
 			<div class="story" id="panel46">
-				<p class='text'>46</p>
+				<p class='text'>"It's easy, you just remove the 's' from seven and you get even," he says. "You have to come up with better riddles if you want to beat me!"</p>
+				<p class='text'>"I guess it could have been more clever," you admit, having not thought of anything better.</p>
+				<p class='text'>"Well, I'll show you how, are you ready?"</p>
+				<button onclick='toFourthRiddle()'>"I'm ready!"</button>
+			</div>
+			<div class="story" id="panel47">
+				<p class='text'>"I know, it's a chopping board!" he guesses.</p>
+				<p class='text'>"No, you don't cut a chopping board, a least you're not supposed to. You cut on it," you tell him. "The right answer id a pack of cards!"</p>
+				<p class='text'>"I guess you're right. Can't always know them. Are you ready for your riddle?"</p>
+				<button onclick='toFourthRiddle()'>"I'm ready!"</button>
+			</div>
+			<div class="story" id="panel48">
+				<p class='text'>"I might not have guessed it, if I hadn't heard it before," he says regretting. "But I have and I know it's temper."</p>
+				<p class='text'>"Thats what I get for not inventing my own riddles, I suppose," you reply.</p>
+				<p class='text'>"It's not always so easy, anyway, are you ready for your riddle?"</p>
+				<button onclick='toFourthRiddle()'>"I'm ready!"</button>
+			</div>
+			<div class="story" id="panel49">
+				<p class='text'>"A chopping board, is it?" he asks.</p>
+				<p class='text'>"No, it's a pack of playing cards," you tell him feeling a bit frustrated. "We seem to be getting no where with this game!"</p>
+				<p class='text'>"I know, it's not usually this hard, but let's hope we'll guess better next round, right..? Are you ready?"</p>
+				<button onclick='toFourthRiddle()'>"I'm ready!"</button>
+			</div>
+			<div class="story" id="panel50">
+				<p class='text'>"You might win with this one, so think hard:"</p>
+			</div>
+			<div class="story" id="panel51">
+				<p class='text'>normal riddle</p>
+			</div>
+			<div class="story" id="panel52">
+				<p class='text'>52</p>
 			</div>
 		</div>
 		<button onclick='quickGoTo(31)'>Back to 31</button>
