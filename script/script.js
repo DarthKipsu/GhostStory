@@ -155,3 +155,30 @@ function toFourthRiddle() {
 		$('#panel51').fadeIn(500);
 	}
 };
+
+function fourthRiddle() {
+	var fourthArray = ['memory', 'recollection', 'thought of past', 'thought', 'remembrance'];
+	var answer = document.getElementById('fourth').value;
+		answer = answer.trim().toLowerCase().replace('a ','').replace('an ','');
+		correct = fourthArray.indexOf(answer);
+	$('#panel50').hide();
+	if (correct >= 0) {
+		if (ghostScore == 2) {
+			$('#panel52').fadeIn(500);
+		} else {
+			$('#panel53').fadeIn(500);
+			if (ghostScore == 1) {
+				$('.ghost-score').append('only guessed one of your riddles.');
+			} else {
+				$('.ghost-score').append('didn\'t guess a single one!');
+			}
+		}
+		userScore += 1;
+	} else {
+		if (ghostScore == 2) {
+			$('#panel54').fadeIn(500);
+		} else {
+			$('#panel55').fadeIn(500);
+		}
+	}
+};
