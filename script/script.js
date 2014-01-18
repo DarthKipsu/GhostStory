@@ -27,6 +27,7 @@ function getName() {
 	return {userName: name, userAge: age}
 };
 
+// add name Tibbs or Tibbets, so the name will be the same even if the user chooses Tibbs as name
 function addMyName() {
 	$('.myName').append(getName().userName + "\"");
 	$('#myName2').append(getName().userName + "...\"");
@@ -38,12 +39,14 @@ function addMyName() {
 		$('#theirName').append('Tibbs?\"');
 		$('#theirName2').prepend('\"Say Tibbs');
 		$('#theirName3').prepend('Tibbs');
-	}
+	};
 };
 
+// Keep score of the riddle game
 var userScore = 0;
 var ghostScore = 0;
 
+// Answers to the first ghost riddle
 function firstRiddle() {
 	var firstArray = ['river', 'brook', 'stream', 'current', 'creek'];
 	var firstCloseArray = ['water', 'waterbed', 'aqua'];
@@ -52,6 +55,7 @@ function firstRiddle() {
 		correct = firstArray.indexOf(answer);
 		close = firstCloseArray.indexOf(answer);
 	$('#panel31').hide();
+	// reset scores while testing
 	userScore = 0;
 	ghostScore = 0;
 	if (correct >= 0) {
@@ -63,9 +67,10 @@ function firstRiddle() {
 		userScore += 1;
 	} else {
 		$('#panel33').fadeIn(500);
-	}
+	};
 };
 
+// First user riddle answers
 function firstGhostScore(selection) {
 	$('.story').hide();
 	if (selection == 1) {
@@ -76,20 +81,22 @@ function firstGhostScore(selection) {
 	} else {
 		$('#panel37').fadeIn(500);
 		ghostScore += 1;
-	}
+	};
 	console.log('user: ' + userScore);
 	console.log('ghost: ' + ghostScore);
 };
 
+// which riddle is shown based on how the first riddle went
 function toSecondRiddle() {
 	$('.story').hide();
 	if (userScore == 1) {
 		$('#panel38').fadeIn(500);
 	} else {
 		$('#panel39').fadeIn(500);
-	}
+	};
 };
 
+// Answers to the more difficult second ghost riddle
 function secondRiddle() {
 	var secondArray = ['tombstone', 'gravestone', 'burialstone'];
 	var secondCloseArray = ['grave', 'tomb', 'burial'];
@@ -108,12 +115,13 @@ function secondRiddle() {
 			userScore += 1;
 		} else {
 			$('#panel42').fadeIn(500);
-		}
+		};
 	} else {
 		$('#panel43').fadeIn(500);
-	}
+	};
 };
 
+// Answer to the easier secong ghost riddle
 function thirdRiddle() {
 	var thirdArray = ['fish'];
 	var answer = document.getElementById('third').value;
@@ -125,9 +133,10 @@ function thirdRiddle() {
 		userScore += 1;
 	} else {
 		$('#panel45').fadeIn(500);
-	}
+	};
 };
 
+// answers to second user riddle
 function secondGS(selection) {
 	$('.story').hide();
 	if (selection == 1) {
@@ -142,20 +151,22 @@ function secondGS(selection) {
 	} else {
 		$('#panel48').fadeIn(500);
 		ghostScore += 1;
-	}
+	};
 	console.log('user: ' + userScore);
 	console.log('ghost: ' + ghostScore);
 };
 
+// which riddle is shown to user third round
 function toFourthRiddle() {
 	$('.story').hide();
 	if (userScore == 2) {
 		$('#panel50').fadeIn(500);
 	} else {
 		$('#panel51').fadeIn(500);
-	}
+	};
 };
 
+// third ghost riddle answers with win possibility
 function fourthRiddle() {
 	var fourthArray = ['memory', 'recollection', 'thought of past', 'thought', 'remembrance'];
 	var answer = document.getElementById('fourth').value;
@@ -164,6 +175,7 @@ function fourthRiddle() {
 	$('#panel50').hide();
 	if (correct >= 0) {
 		if (ghostScore == 2) {
+			// tie breaker possibility
 			$('#panel52').fadeIn(500);
 		} else {
 			$('#panel53').fadeIn(500);
@@ -180,5 +192,38 @@ function fourthRiddle() {
 		} else {
 			$('#panel55').fadeIn(500);
 		}
-	}
+	};
+};
+
+// third ghost riddle answers without win possibility
+function fifthRiddle() {
+	var fifthArray = ['worm', 'grub', 'maggot'];
+	var answer = document.getElementById('fifth').value;
+		answer = answer.trim().toLowerCase().replace('a ','').replace('an ','');
+		correct = fifthArray.indexOf(answer);
+	$('#panel51').hide();
+	if (correct >= 0) {
+		if (ghostScore == 2) {
+			$('#panel56').fadeIn(500);
+		} else {
+			$('#panel57').fadeIn(500);
+		}
+		userScore += 1;
+	} else if (ghostScore + userScore == 0) {
+		$('#panel60').fadeIn(500);
+	} else {
+		if (ghostScore == 2) {
+			$('#panel58').fadeIn(500);
+		} else {
+			$('#panel59').fadeIn(500);
+		}
+	};
+	// the ghost tells the current situation.
+	if (ghostScore == userScore) {
+		$('.score').append('It\'s a tie, but I haven\'t yet guessed this round so I might still get the lead.');
+	} else if (userScore > ghostScore) {
+		$('.score').append('You have guesed ' + (userScore - ghostScore) + ' more right than me, though I haven\t still guessed this round.');
+	} else {
+		$('.score').append('I\'m winning at the moment, but you can still catch up, if you do well next round.');
+	};
 };
