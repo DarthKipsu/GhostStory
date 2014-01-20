@@ -251,3 +251,34 @@ function thirdGS(selection) {
 	console.log('user: ' + userScore);
 	console.log('ghost: ' + ghostScore);
 };
+
+// answers to last user riddle
+function fourthGS(selection) {
+	$('.story').hide();
+	if (selection == 1) {
+		$('#panel64').fadeIn(500);
+	} else if (selection == 2) {
+		$('#panel65').fadeIn(500);
+		ghostScore += 1;
+	} else {
+		$('#panel66').fadeIn(500);
+	};
+	console.log('user: ' + userScore);
+	console.log('ghost: ' + ghostScore);
+};
+
+function toTieRiddle() {};
+
+// answers to the user riddle when all answers have been wrongly answered
+function fourthGS(selection) {
+	$('.story').hide();
+	if (selection == 1) {
+		$('#panel67').fadeIn(500);
+	} else if (selection == 2) {
+		$('#panel68').fadeIn(500);
+	} else {
+		$('#panel69').fadeIn(500);
+	};
+	console.log('user: ' + userScore);
+	console.log('ghost: ' + ghostScore);
+};

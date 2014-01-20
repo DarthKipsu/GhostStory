@@ -372,6 +372,11 @@
 				<p class='text'>"You got it right!" he announced joyfully. "However I still have one try. If I know your next riddle, we'll have a tiebreaker round, if not, you have won. Sound fair?"</p>
 				<p class='text'>"Fair enough," you agree. "Ready for the resolving riddle?"</p>
 				<p class='text'>"As ready as ever! Bring your best!"</p>
+				<select class="no-margin">
+					<option onclick='fourthGS(1)'>"What goes up when the rain goes down?"</option>
+					<option onclick='fourthGS(2)'>"What kind of coat can only be put on when wet?"</option>
+					<option onclick='fourthGS(3)'>"Why will Arctic people rather starve than eat penguin?"</option>
+				</select>
 			</div>
 			<div class="story" id="panel53">
 				<p class='text'>"You're right!" he announced joyfully. "You got all three right, I <span class="ghost-score"></span> Congratulations!"</p>
@@ -384,8 +389,8 @@
 				<p class='text'>"Of course it was! how stupid of me, " you curse disappointed.</p>
 				<p class='text'>"You can't know everything," he says. I have guessed all right this far, so it's your turn and if I know this one, I will win."</p>
 				<select class="no-margin">
-					<option onclick='thirdGS(1)'>"What gos up and never goes down?"</option>
-					<option onclick='thirdGS(2)'>"What doe one have in their pocket?"</option>
+					<option onclick='thirdGS(1)'>"What goes up and never goes down?"</option>
+					<option onclick='thirdGS(2)'>"What does one have in their pocket?"</option>
 					<option onclick='thirdGS(3)'>"What runs around the house but doesn't move?"</option>
 				</select>
 			</div>
@@ -399,8 +404,8 @@
 				<p class='text'>"I'll jus have to come up with a trivial one you don't know," you say, trying to think of an difficult riddle.</p>
 				<p class='text'>"You do that, I love challenges!"</p>
 				<select class="no-margin">
-					<option onclick='thirdGS(1)'>"What gos up and never goes down?"</option>
-					<option onclick='thirdGS(2)'>"What doe one have in their pocket?"</option>
+					<option onclick='thirdGS(1)'>"What goes up and never goes down?"</option>
+					<option onclick='thirdGS(2)'>"What does one have in their pocket?"</option>
 					<option onclick='thirdGS(3)'>"What runs around the house but doesn't move?"</option>
 				</select>
 			</div>
@@ -412,8 +417,8 @@
 				<p class='text'>"Sorry, no. The right answer would have been a worm," he tells you. "Now, if I get the next riddle right, I'll have three right and win the game. So choose your questions right."</p>
 				<p class='text'>"I'll try my best," you promise him, tring to figure out in your head a good riddle.</p>
 				<select>
-					<option onclick='thirdGS(1)'>"What gos up and never goes down?"</option>
-					<option onclick='thirdGS(2)'>"What doe one have in their pocket?"</option>
+					<option onclick='thirdGS(1)'>"What goes up and never goes down?"</option>
+					<option onclick='thirdGS(2)'>"What does one have in their pocket?"</option>
 					<option onclick='thirdGS(3)'>"What runs around the house but doesn't move?"</option>
 				</select>
 			</div>
@@ -424,6 +429,11 @@
 			<div class="story" id="panel60">
 				<p class='text'>"No, the right answer was a worm," he says looking disappointed. "We'll never get through this. If I don't guess the next answer right, how would you feel if we change the rules so the first one to guess right wins?"</p>
 				<p class='text'>"Sounds fair to me," you reply. "We don't want to be at this the whole night."</p>
+				<select class="no-margin">
+					<option onclick='fifthGS(1)'>"How many seconds are in a year?"</option>
+					<option onclick='fifthGS(2)'>"How many apples grow on a tree?"</option>
+					<option onclick='fifthGS(3)'>"What do you throw away when you need it and take it back when you don't?"</option>
+				</select>
 			</div>
 			<div class="story" id="panel61">
 				<p class='text'>"It could have been a... no," he pauses. "It's age. You never get any younger."</p>
@@ -444,7 +454,34 @@
 				<button onclick='switchPanel(63,13)'>You watch the ghost disappear</button>
 			</div>
 			<div class="story" id="panel64">
-				<p class='text'>61</p>
+				<p class='text'>"It must be mist!" he thinks.</p>
+				<p class='text'>"But it isn't. Mist only comes after rain. The answer was an umbrella!" you tell him thrilled with your victory.</p>
+				<p class='text'>"Of course! It was fun! But I'm allready late," he regrets. "I should get going. Was nice to meet you though and good night!"</p>
+				<button onclick='switchPanel(64,13)'>You watch the ghost disappear</button>
+			</div>
+			<div class="story" id="panel65">
+				<p class='text'>"Hah, but I know this one too! It's coat of paint!" he cheers.</p>
+				<p class='text'>"You're right. I guess we're for the tie braker round then."</p>
+				<p class='text'>"Yeah, we need to give it our best shots, are you ready for your riddle?"</p>
+				<button onclick='toTieRiddle()'>"I'm ready!"</button>
+			</div>
+			<div class="story" id="panel66">
+				<p class='text'>"I..." he looks even more pale. "I have no idea."</p>
+				<p class='text'>"It's because penguins live south on Antarctic, not north on Arctic!" you say, thrilled with your victory.</p>
+				<p class='text'>"Of course! It was fun! But I'm allready late," he regrets. "I should get going. Was nice to meet you though and good night!"</p>
+				<button onclick='switchPanel(66,13)'>You watch the ghost disappear</button>
+			</div>
+			<div class="story" id="panel67">
+				<p class='text'>wrong</p>
+			</div>
+			<div class="story" id="panel68">
+				<p class='text'>wrong</p>
+			</div>
+			<div class="story" id="panel69">
+				<p class='text'>wrong</p>
+			</div>
+			<div class="story" id="panel70">
+				<p class='text'>70</p>
 			</div>
 		</div>
 		<button onclick='quickGoTo(31)'>Back to 31</button>
