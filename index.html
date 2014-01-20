@@ -84,7 +84,7 @@
 				<p class='text'>"Well then, how come you didn't say so earlier?" the ghost replied with frustration in his voice. "I've been here for nothing!"</p>
 				<p class='text'>"You never asked my name!" you shout.</p>
 				<p class='text'>He looks at you with wary eyes, "you are right. My apologies. I must be on my way now, maybe they will send you a better sprite to hount you so you'll be in constant fright. Good night!"</p>
-				<button onclick='switchPanel(12,13)'>You watch the ghost dissappear</button>
+				<button onclick='switchPanel(12,13)'>You watch the ghost disappear</button>
 			</div>
 			<div class="story" id="panel13">
 				<p class='text'>Though the friendly ghost has often been in your mind, you haven't been visited by any kind of ghost, sprite, or poltergeist. since.</p>
@@ -133,7 +133,7 @@
 				<p class='text'>"I can see my welcome has expired, it's allright, in any case I must be on my way," he says and gets up while pouring himself one last glass of the bad wine you were serving him.</p>
 				<p class='text'>"Will I be seeing goblins next?" you ask feeling annoyed and a bit scared on what follows.</p>
 				<p class='text'>"Who knows. It's been nice to chat with you though," he grants. "Either way, good night!"</p>
-				<button onclick='switchPanel(20,13)'>You watch the ghost dissappear</button>
+				<button onclick='switchPanel(20,13)'>You watch the ghost disappear</button>
 			</div>
 			<div class="story" id="panel21">
 				<p class='text'>"The Mayor's extremely fat, which suits his job well," he reasons. "When he was elected mayor he ran in exitment to the King, and for that effort, for such a big figure, the King knighted him on the spot!"</p>
@@ -179,7 +179,7 @@
 				<p class='text'>"It wasn' that bad and I could sure spend some more time here cattering, but I think I must be going," he says after the dinner.</p>
 				<p class='text'>"I guess ghosts have schedules to keep up with aswell."</p>
 				<p class='text'>"Indeed, good night my friend!" he says and nods.</p>
-				<button onclick='switchPanel(27,13)'>You watch the ghost dissappear</button>
+				<button onclick='switchPanel(27,13)'>You watch the ghost disappear</button>
 			</div>
 			<div class="story" id="panel28">
 				<p class='text'>"I'd rather not," he says timidly. "For phantoms have just as good reason being afraid of light, as men have to fear the dark."</p>
@@ -377,12 +377,17 @@
 				<p class='text'>"You're right!" he announced joyfully. "You got all three right, I <span class="ghost-score"></span> Congratulations!"</p>
 				<p class='text'>"This was fun! Do you want to try again?" you ask him, thrilled with your victory.</p>
 				<p class='text'>"It was fun! But I'm allready late," he regrets. "I should get going. Was nice to meet you though and good night!"</p>
-				<button onclick='switchPanel(53,13)'>You watch the ghost dissappear</button>
+				<button onclick='switchPanel(53,13)'>You watch the ghost disappear</button>
 			</div>
 			<div class="story" id="panel54">
 				<p class='text'>"Unfortunately the right answer was a memory!" he tells you.</p>
-				<p class='text'>"Of course it was! how stupid of me, " you curse dissapointed.</p>
+				<p class='text'>"Of course it was! how stupid of me, " you curse disappointed.</p>
 				<p class='text'>"You can't know everything," he says. I have guessed all right this far, so it's your turn and if I know this one, I will win."</p>
+				<select class="no-margin">
+					<option onclick='thirdGS(1)'>"What gos up and never goes down?"</option>
+					<option onclick='thirdGS(2)'>"What doe one have in their pocket?"</option>
+					<option onclick='thirdGS(3)'>"What runs around the house but doesn't move?"</option>
+				</select>
 			</div>
 			<div class="story" id="panel55">
 				<p class='text'>"Oh, the right answer was a memory," he tells you. "Maybe the next round will determine who wins!"</p>
@@ -393,6 +398,11 @@
 				<p class='text'>"That's right!" he says. "Though it might not be enough. If I get the next riddle right, I'll win the game."</p>
 				<p class='text'>"I'll jus have to come up with a trivial one you don't know," you say, trying to think of an difficult riddle.</p>
 				<p class='text'>"You do that, I love challenges!"</p>
+				<select class="no-margin">
+					<option onclick='thirdGS(1)'>"What gos up and never goes down?"</option>
+					<option onclick='thirdGS(2)'>"What doe one have in their pocket?"</option>
+					<option onclick='thirdGS(3)'>"What runs around the house but doesn't move?"</option>
+				</select>
 			</div>
 			<div class="story" id="panel57">
 				<p class='text'>"You knew it!" he says. "<span class="score"></span>"</p>
@@ -401,16 +411,39 @@
 			<div class="story" id="panel58">
 				<p class='text'>"Sorry, no. The right answer would have been a worm," he tells you. "Now, if I get the next riddle right, I'll have three right and win the game. So choose your questions right."</p>
 				<p class='text'>"I'll try my best," you promise him, tring to figure out in your head a good riddle.</p>
+				<select>
+					<option onclick='thirdGS(1)'>"What gos up and never goes down?"</option>
+					<option onclick='thirdGS(2)'>"What doe one have in their pocket?"</option>
+					<option onclick='thirdGS(3)'>"What runs around the house but doesn't move?"</option>
+				</select>
 			</div>
 			<div class="story" id="panel59">
 				<p class='text'>"Unfortunately no. The right answer for this one was a worm," he says. "<span class="score"></span>"</p>
 				<p class='text'>"Anything is still possible. I think it's my turn now to come up with a riddle," you reply.</p>
 			</div>
 			<div class="story" id="panel60">
-				<p class='text'>"No, the right answer was a worm," he says looking dissapointed. "We'll never get through this. If I don't guess the next answer right, how would you feel if we change the rules so the first one to guess right wins?"</p>
+				<p class='text'>"No, the right answer was a worm," he says looking disappointed. "We'll never get through this. If I don't guess the next answer right, how would you feel if we change the rules so the first one to guess right wins?"</p>
 				<p class='text'>"Sounds fair to me," you reply. "We don't want to be at this the whole night."</p>
 			</div>
 			<div class="story" id="panel61">
+				<p class='text'>"It could have been a... no," he pauses. "It's age. You never get any younger."</p>
+				<p class='text'>"That's right!" you say a bit disappointed. "You got all three right, I <span class="scoreThird"></span>, so you win."</p>
+				<p class='text'>"It was fun! But I'm allready late," he regrets. "I should get going. Was nice to meet you though and good night!"</p>
+				<button onclick='switchPanel(61,13)'>You watch the ghost disappear</button>
+			</div>
+			<div class="story" id="panel62">
+				<p class='text'>"You shouldn't have..." he smiles kindly. "Everyone knows, it's a ring!"</p>
+				<p class='text'>"Yeah, I guess, you got it right," you say a bit disappointed. "You got all three right, I <span class="scoreThird"></span>, so you win."</p>
+				<p class='text'>"It was fun! But I'm allready late," he regrets. "I should get going. Was nice to meet you though and good night!"</p>
+				<button onclick='switchPanel(62,13)'>You watch the ghost disappear</button>
+			</div>
+			<div class="story" id="panel63">
+				<p class='text'>"That's a tricky one," he admits. "I guess, if you must go around the house it has to be either plinth or... a fence!"</p>
+				<p class='text'>"Yeah, it's right!" you say defeated. "You got all three right, I <span class="scoreThird"></span>, so you win!"</p>
+				<p class='text'>"It was fun! But I'm allready late," he regrets. "I should get going. Was nice to meet you though and good night!"</p>
+				<button onclick='switchPanel(63,13)'>You watch the ghost disappear</button>
+			</div>
+			<div class="story" id="panel64">
 				<p class='text'>61</p>
 			</div>
 		</div>

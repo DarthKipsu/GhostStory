@@ -172,7 +172,7 @@ function fourthRiddle() {
 	var answer = document.getElementById('fourth').value;
 		answer = answer.trim().toLowerCase().replace('a ','').replace('an ','');
 		correct = fourthArray.indexOf(answer);
-	$('#panel50').hide();
+	$('.story').hide();
 	if (correct >= 0) {
 		if (ghostScore == 2) {
 			// tie breaker possibility
@@ -226,4 +226,28 @@ function fifthRiddle() {
 	} else {
 		$('.score').append('I\'m winning at the moment, but you can still catch up, if you do well next round.');
 	};
+};
+
+// answers to last user riddle
+function thirdGS(selection) {
+	$('.story').hide();
+	if (userScore == 0) {
+		$('.scoreThird').append('didn\'t get any');
+	} else if (userScore == 1) {
+		$('.scoreThird').append('only got one');
+	} else {
+		$('.scoreThird').append('only got two');
+	};
+	if (selection == 1) {
+		$('#panel61').fadeIn(500);
+		ghostScore += 1;
+	} else if (selection == 2) {
+		$('#panel62').fadeIn(500);
+		ghostScore += 1;
+	} else {
+		$('#panel63').fadeIn(500);
+		ghostScore += 1;
+	};
+	console.log('user: ' + userScore);
+	console.log('ghost: ' + ghostScore);
 };
