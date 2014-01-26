@@ -576,29 +576,77 @@
 				<button onclick='switchPanel(80,81)'>"I'm ready!"</button>
 			</div>
 			<div class="story" id="panel81">
-				<p class='text'>"You wear me every day, but you never put me on."</p>
-				<p class='text'>"I will change colors, if you leave me out too long."</p>
+				<p class='text'>"You wear me every day, but never put me on."</p>
+				<p class='text'>"I will change colors, if you leave me out for too long."</p>
 				<p class='text'>"What am I?"</p>
 				<input type="text" class="riddle" id="sixth">
 				<button class="riddle-button" onclick='sixthRiddle()'>Submit your answer</button>
 			</div>
 			<div class="story" id="panel82">
-				<p class='text'>right, tie possibility</p>
+				<p class='text'>"That's absolutely right!" he says. "You've guessed two right, I only have one, so you might win with next round if I don't get back to even with your next riddle."</p>
+				<p class='text'>"Right. Are you ready then?"</p>
+				<p class='text'>"As ready as ever, keep the riddles coming!"</p>
+				<select class="no-margin">
+					<option onclick='seventhGS(1)'>"What is there between Heaven and Earth?"</option>
+					<option onclick='seventhGS(2)'>"What has lakes with no fish and roads with no cars?"</option>
+					<option onclick='seventhGS(3)'>"What's written with two letters, said with one and seen with two?"</option>
+				</select>
 			</div>
 			<div class="story" id="panel83">
-				<p class='text'>right, ghost wins with next</p>
+				<p class='text'>"Unfortunately the right answer was a skin!" he tells you.</p>
+				<p class='text'>"Of course it was! how stupid of me, " you curse disappointed.</p>
+				<p class='text'>"You can't know everything," he says. I have guessed all right this far, so it's your turn and if I know this one, I will win."</p>
+				<select class="no-margin">
+					<option onclick='thirdGS(1)'>"What goes up and never goes down?"</option>
+					<option onclick='thirdGS(2)'>"What does one have in their pocket?"</option>
+					<option onclick='thirdGS(3)'>"What runs around the house but doesn't move?"</option>
+				</select>
 			</div>
 			<div class="story" id="panel84">
-				<p class='text'>right, user wins</p>
+				<p class='text'>"You're right!" he announced joyfully. "You got all three right, I only got one. Congratulations!"</p>
+				<p class='text'>"This was fun! Do you want to try again?" you ask him, thrilled with your victory.</p>
+				<p class='text'>"It was fun! But I'm allready late," he regrets. "I should get going. Was nice to meet you though and good night!"</p>
+				<button onclick='switchPanel(84,13)'>You watch the ghost disappear</button>
 			</div>
 			<div class="story" id="panel85">
-				<p class='text'>right score 2/1</p>
+				<p class='text'>"No, the right answer was a skin," he says. "But either could still win, so try your hardest with the next one."</p>
+				<p class='text'>"Right. Are you ready then?"</p>
+				<p class='text'>"As ready as ever, keep the riddles coming!"</p>
+				<select class="no-margin">
+					<option onclick='seventhGS(1)'>"What is there between Heaven and Earth?"</option>
+					<option onclick='seventhGS(2)'>"What has lakes with no fish and roads with no cars?"</option>
+					<option onclick='seventhGS(3)'>"What's written with two letters, said with one and seen with two?"</option>
+				</select>
 			</div>
 			<div class="story" id="panel86">
-				<p class='text'>wrong, ghost wins with next one</p>
+				<p class='text'>"I've heard this one before! It's <span id="answer86"></span>," he says joyfully. "The next round might solve who wins this game!"</p>
+				<p class='text'>"You've played this game too much! But that's right. <span class="score86"></span>."</p>
+				<p class='text'>"Good luck then. Are you ready?"</p>
+				<button onclick='switchPanel(86,87)'>"I'm ready!"</button>
 			</div>
-			<div class="story" id="panel83">
-				<p class='text'>wrong, either might still win</p>
+			<div class="story" id="panel87">
+				<p class='text'>"It's a five lettered word, used to make bread."</p>
+				<p class='text'>"Remove one letter and it'll burn you instead."</p>
+				<p class='text'>"Remove two and do this to your stew."</p>
+				<p class='text'>"Mix that around and a good drink we will brew."</p>
+				<input type="text" class="riddle" id="seventh">
+				<button class="riddle-button" onclick='seventhRiddle()'>Submit your answer</button>
+			</div>
+			<div class="story" id="panel88">
+				<p class='text'>"Unfortunately the right answer was wheat!" he tells you. "When you remove w it becomes heat then h too and it's eat which scrambles to tea."</p>
+				<p class='text'>"Yeah, well, I just couldn't come to think f it."</p>
+				<p class='text'>"You can't know everything," he says. I have guessed all right this far, so it's your turn and if I know this one, I will win."</p>
+				<select class="no-margin">
+					<option onclick='thirdGS(1)'>"What goes up and never goes down?"</option>
+					<option onclick='thirdGS(2)'>"What does one have in their pocket?"</option>
+					<option onclick='thirdGS(3)'>"What runs around the house but doesn't move?"</option>
+				</select>
+			</div>
+			<div class="story" id="panel89">
+				<p class='text'>empty</p>
+			</div>
+			<div class="story" id="panel90">
+				<p class='text'>empty</p>
 			</div>
 		</div>
 		<button onclick='quickGoTo(31)'>Back to 31</button>

@@ -358,36 +358,83 @@ function sixthGS(selection) {
 		} else  {
 			$('.score80').append('at a tie. Either of us could win the next round');
 		}
-	}
+	};
 	console.log('user: ' + userScore);
 	console.log('ghost: ' + ghostScore);
 };
 
 // sixth ghost riddle, score possibilities (user/ghost) 0/2, 1/1, 1/2, 2/1, 2/2
 function sixthRiddle() {
-	var fourthArray = ['memory', 'recollection', 'thought of past', 'thought', 'remembrance'];
-	var answer = document.getElementById('fourth').value;
+	var sixthArray = ['skin'];
+	var answer = document.getElementById('sixth').value;
 		answer = answer.trim().toLowerCase().replace('a ','').replace('an ','');
-		correct = fourthArray.indexOf(answer);
+		correct = sixthArray.indexOf(answer);
 	$('.story').hide();
 	if (correct >= 0) {
 		if (ghostScore == 2) {
-			// tie breaker possibility
-			$('#panel52').fadeIn(500);
-		} else {
-			$('#panel53').fadeIn(500);
-			if (ghostScore == 1) {
-				$('.ghost-score').append('only guessed one of your riddles.');
+			if (userScore == 2) {
+				// tie breaker possibility
+				$('#panel52').fadeIn(500);
 			} else {
-				$('.ghost-score').append('didn\'t guess a single one!');
+				// ghost will win with next one
+				$('#panel56').fadeIn(500);
+			}
+		} else {
+			if (userScore == 2) {
+				// user wins
+				$('#panel84').fadeIn(500);
+			} else {
+				$('#panel82').fadeIn(500);
 			}
 		}
 		userScore += 1;
 	} else {
 		if (ghostScore == 2) {
-			$('#panel54').fadeIn(500);
+			// ghost will win with next one
+			$('#panel83').fadeIn(500);
 		} else {
-			$('#panel55').fadeIn(500);
+			$('#panel85').fadeIn(500);
 		}
+	};
+};
+
+// answers seventh user riddle
+function seventhGS(selection) {
+	$('.story').hide();
+	ghostScore += 1;
+	if (selection == 1) {
+		$('#answer86').append('a word \'and\'');
+	} else if (selection == 2) {
+		$('#answer86').append('a map');
+	} else {
+		$('#answer86').append('an eye');
+	};
+	$('#panel86').fadeIn(500);
+	if (userScore == 1) {
+		$('.score86').append('if you know the next one aswell, you will win this game');
+	} else {
+		$('.score86').append('if either of us fails the next round he\'ll lose. Unless it\'s a tie.');
+	};
+	console.log('user: ' + userScore);
+	console.log('ghost: ' + ghostScore);
+};
+
+// seventh, final ghost riddle answers
+function seventhRiddle() {
+	var seventhArray = ['wheat'];
+	var answer = document.getElementById('seventh').value;
+		answer = answer.trim().toLowerCase().replace('a ','').replace('an ','');
+		correct = seventhArray.indexOf(answer);
+	$('.story').hide();
+	if (correct >= 0) {
+		if (userScore == 2) {
+			$('#panel52').fadeIn(500);
+		} else {
+			$('#panel56').fadeIn(500);
+		}
+		userScore += 1;
+	} else {
+		// ghost will win with next one
+		$('#panel88').fadeIn(500);
 	};
 };
