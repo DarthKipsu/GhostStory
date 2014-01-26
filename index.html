@@ -398,6 +398,11 @@
 				<p class='text'>"Oh, the right answer was a memory," he tells you. "Maybe the next round will determine who wins!"</p>
 				<p class='text'>"Yeah, I guess this can still turn any way around."</p>
 				<p class='text'>"It sure can. Now it's your turn again."</p>
+				<select>
+					<option onclick='sixthGS(1)'>"What has 4 fingers and a thumb, but is not living?"</option>
+					<option onclick='sixthGS(2)'>"What has holes on each side, but can still can hold water?"</option>
+					<option onclick='sixthGS(3)'>"What is so delicate that even mentioning it breaks it?"</option>
+				</select>
 			</div>
 			<div class="story" id="panel56">
 				<p class='text'>"That's right!" he says. "Though it might not be enough. If I get the next riddle right, I'll win the game."</p>
@@ -412,6 +417,11 @@
 			<div class="story" id="panel57">
 				<p class='text'>"You knew it!" he says. "<span class="score"></span>"</p>
 				<p class='text'>"Anything is still possible. I think it's my turn now to come up with a riddle," you reply.</p>
+				<select>
+					<option onclick='sixthGS(1)'>"What has 4 fingers and a thumb, but is not living?"</option>
+					<option onclick='sixthGS(2)'>"What has holes on each side, but can still can hold water?"</option>
+					<option onclick='sixthGS(3)'>"What is so delicate that even mentioning it breaks it?"</option>
+				</select>
 			</div>
 			<div class="story" id="panel58">
 				<p class='text'>"Sorry, no. The right answer would have been a worm," he tells you. "Now, if I get the next riddle right, I'll have three right and win the game. So choose your questions right."</p>
@@ -425,6 +435,11 @@
 			<div class="story" id="panel59">
 				<p class='text'>"Unfortunately no. The right answer for this one was a worm," he says. "<span class="score"></span>"</p>
 				<p class='text'>"Anything is still possible. I think it's my turn now to come up with a riddle," you reply.</p>
+				<select>
+					<option onclick='sixthGS(1)'>"What has 4 fingers and a thumb, but is not living?"</option>
+					<option onclick='sixthGS(2)'>"What has holes on each side, but can still can hold water?"</option>
+					<option onclick='sixthGS(3)'>"What is so delicate that even mentioning it breaks it?"</option>
+				</select>
 			</div>
 			<div class="story" id="panel60">
 				<p class='text'>"No, the right answer was a worm," he says looking disappointed. "We'll never get through this. If I don't guess the next answer right, how would you feel if we change the rules so the first one to guess right wins?"</p>
@@ -555,7 +570,35 @@
 				<button onclick='switchPanel(79,13)'>You watch the ghost disappear</button></p>
 			</div>
 			<div class="story" id="panel80">
-				<p class='text'>80</p>
+				<p class='text'>"It's <span id="answer80"></span>, isn't it?" he makes a right guess.</p>
+				<p class='text'>"Yeah, you knew it," you reply. "The score is now <span class="score80"></span>."</p>
+				<p class='text'>"I'll try to come up with a good riddle for you next. Are you ready?"</p>
+				<button onclick='switchPanel(80,81)'>"I'm ready!"</button>
+			</div>
+			<div class="story" id="panel81">
+				<p class='text'>"You wear me every day, but you never put me on."</p>
+				<p class='text'>"I will change colors, if you leave me out too long."</p>
+				<p class='text'>"What am I?"</p>
+				<input type="text" class="riddle" id="sixth">
+				<button class="riddle-button" onclick='sixthRiddle()'>Submit your answer</button>
+			</div>
+			<div class="story" id="panel82">
+				<p class='text'>right, tie possibility</p>
+			</div>
+			<div class="story" id="panel83">
+				<p class='text'>right, ghost wins with next</p>
+			</div>
+			<div class="story" id="panel84">
+				<p class='text'>right, user wins</p>
+			</div>
+			<div class="story" id="panel85">
+				<p class='text'>right score 2/1</p>
+			</div>
+			<div class="story" id="panel86">
+				<p class='text'>wrong, ghost wins with next one</p>
+			</div>
+			<div class="story" id="panel83">
+				<p class='text'>wrong, either might still win</p>
 			</div>
 		</div>
 		<button onclick='quickGoTo(31)'>Back to 31</button>

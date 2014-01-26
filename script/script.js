@@ -305,7 +305,7 @@ function tieRiddle() {
 	};
 };
 
-// answers to ttiebraker ghost turn
+// answers to tiebraker ghost turn
 function tieGS(selection) {
 	$('.story').hide();
 	ghostScore += 1;
@@ -330,4 +330,64 @@ function tieGS(selection) {
 	};
 	console.log('user: ' + userScore);
 	console.log('ghost: ' + ghostScore);
+};
+
+// answers sixth user riddle
+function sixthGS(selection) {
+	$('.story').hide();
+	ghostScore += 1;
+	if (selection == 1) {
+		$('#answer80').append('a glove');
+	} else if (selection == 2) {
+		$('#answer80').append('a sponge');
+	} else {
+		$('#answer80').append('silence');
+	};
+	$('#panel80').fadeIn(500);
+	if (userScore == 0) {
+		$('.score80').append('two to none in your favor. You might win with next round');
+	} else if (userScore == 1) {
+		if (ghostScore == 1) {
+			$('.score80').append('at a tie, we both have one correct answer');
+		} else {
+			$('.score80').append('two to one in your favor. You might win with next round');
+		}
+	} else {
+		if (ghostScore == 1) {
+			$('.score80').append('two to one in my favor. I might win with next round');
+		} else  {
+			$('.score80').append('at a tie. Either of us could win the next round');
+		}
+	}
+	console.log('user: ' + userScore);
+	console.log('ghost: ' + ghostScore);
+};
+
+// sixth ghost riddle, score possibilities (user/ghost) 0/2, 1/1, 1/2, 2/1, 2/2
+function sixthRiddle() {
+	var fourthArray = ['memory', 'recollection', 'thought of past', 'thought', 'remembrance'];
+	var answer = document.getElementById('fourth').value;
+		answer = answer.trim().toLowerCase().replace('a ','').replace('an ','');
+		correct = fourthArray.indexOf(answer);
+	$('.story').hide();
+	if (correct >= 0) {
+		if (ghostScore == 2) {
+			// tie breaker possibility
+			$('#panel52').fadeIn(500);
+		} else {
+			$('#panel53').fadeIn(500);
+			if (ghostScore == 1) {
+				$('.ghost-score').append('only guessed one of your riddles.');
+			} else {
+				$('.ghost-score').append('didn\'t guess a single one!');
+			}
+		}
+		userScore += 1;
+	} else {
+		if (ghostScore == 2) {
+			$('#panel54').fadeIn(500);
+		} else {
+			$('#panel55').fadeIn(500);
+		}
+	};
 };
