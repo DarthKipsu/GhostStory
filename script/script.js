@@ -267,10 +267,13 @@ function fourthGS(selection) {
 	console.log('ghost: ' + ghostScore);
 };
 
-function toTieRiddle() {};
+function toTieRiddle() {
+	$('.story').hide();
+	$('#panel70').fadeIn(500);
+};
 
 // answers to the user riddle when all answers have been wrongly answered
-function fourthGS(selection) {
+function fifthGS(selection) {
 	$('.story').hide();
 	if (selection == 1) {
 		$('#panel67').fadeIn(500);
@@ -278,6 +281,52 @@ function fourthGS(selection) {
 		$('#panel68').fadeIn(500);
 	} else {
 		$('#panel69').fadeIn(500);
+	};
+	console.log('user: ' + userScore);
+	console.log('ghost: ' + ghostScore);
+};
+
+// Answers to tiebraker ghost riddle
+function tieRiddle() {
+	var tieArray = ['moon'];
+	var answer = document.getElementById('tieR').value;
+		answer = answer.trim().toLowerCase().replace('a ','').replace('the ','').replace('an ','');
+		correct = tieArray.indexOf(answer);
+	$('#panel70').hide();
+	if (correct >= 0) {
+		if (userScore == 3) {
+			$('#panel71').fadeIn(500);
+		} else {
+			$('#panel72').fadeIn(500);
+		}
+		userScore += 1;
+	} else {
+		$('#panel73').fadeIn(500);
+	};
+};
+
+// answers to ttiebraker ghost turn
+function tieGS(selection) {
+	$('.story').hide();
+	ghostScore += 1;
+	if (selection == 1) {
+		if (ghostScore == 1) {
+			$('#panel74').fadeIn(500);
+		} else {
+			$('#panel75').fadeIn(500);
+		}
+	} else if (selection == 2) {
+		if (ghostScore == 1) {
+			$('#panel76').fadeIn(500);
+		} else {
+			$('#panel77').fadeIn(500);
+		}
+	} else {
+		if (ghostScore == 1) {
+			$('#panel78').fadeIn(500);
+		} else {
+			$('#panel79').fadeIn(500);
+		}
 	};
 	console.log('user: ' + userScore);
 	console.log('ghost: ' + ghostScore);

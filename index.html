@@ -415,7 +415,7 @@
 			</div>
 			<div class="story" id="panel58">
 				<p class='text'>"Sorry, no. The right answer would have been a worm," he tells you. "Now, if I get the next riddle right, I'll have three right and win the game. So choose your questions right."</p>
-				<p class='text'>"I'll try my best," you promise him, tring to figure out in your head a good riddle.</p>
+				<p class='text'>"I'll try my best," you promise him, trying to figure out in your head a good riddle.</p>
 				<select>
 					<option onclick='thirdGS(1)'>"What goes up and never goes down?"</option>
 					<option onclick='thirdGS(2)'>"What does one have in their pocket?"</option>
@@ -472,16 +472,90 @@
 				<button onclick='switchPanel(66,13)'>You watch the ghost disappear</button>
 			</div>
 			<div class="story" id="panel67">
-				<p class='text'>wrong</p>
+				<p class='text'>"Some 31 and half a million, I really can't count the exact amount in my head!" he complained.</p>
+				<p class='text'>"It's allright, there's no need to, for the right answer is twelve. January 2nd, February 2nd and so on..."</p>
+				<p class='text'>"Oh, of course!" his look becomes clear. "Well, we've got all wrong, so let's start the tiebraker rounds and may the better of us win."</p>
+				<button onclick='toTieRiddle()'>"I'm ready!"</button>
 			</div>
 			<div class="story" id="panel68">
-				<p class='text'>wrong</p>
+				<p class='text'>"How many..." he thinks. "There has to be an explicit answer to this. How about as many as it can carry?"</p>
+				<p class='text'>"Close I guess. But the right answer was all apples grow on trees." you explain.</p>
+				<p class='text'>"Darn! I should have known that!" he shouts. "Well, I guess it's the tiebraker rounds then. May the better of us win!"</p>
+				<button onclick='toTieRiddle()'>"I'm ready!"</button>
 			</div>
 			<div class="story" id="panel69">
-				<p class='text'>wrong</p>
+				<p class='text'>"I know! A life buoy!" he says joyfully.</p>
+				<p class='text'>"Well, actually it's an anchor," you tell him. "I guess a life buoy is close too, but technically you throw it when someone else needs it."</p>
+				<p class='text'>"You have a point. Well, that's it. We really suck at this game! Let's start the tiebraker rounds then. May the better of us win."</p>
+				<button onclick='toTieRiddle()'>"I'm ready!"</button>
 			</div>
 			<div class="story" id="panel70">
-				<p class='text'>70</p>
+				<p class='text'>"What can be half without getting thinner."</p>
+				<p class='text'>"That can shine with no fire."</p>
+				<p class='text'>"Be hidden but never taken."</p>
+				<p class='text'>"Stay dry while moving the ocean."</p>
+				<input type="text" class="riddle" id="tieR">
+				<button class="riddle-button" onclick='tieRiddle()'>Submit your answer</button>
+			</div>
+			<div class="story" id="panel71">
+				<p class='text'>"You got it right aswell!" he rejoys. "As the rules said, you've won the game!"</p>
+				<p class='text'>"Finally!", you say joyfully. "But shouldn't you have a change to even out?"</p>
+				<p class='text'>"Nah, tiebrakers end at first right answer and I'm actually already a bit late..." he says. "I should get going. Good night!"</p>
+				<button onclick='switchPanel(71,13)'>You watch the ghost disappear</button>
+			</div>
+			<div class="story" id="panel71">
+				<p class='text'>"Wow! You knew it!" he rejoys. "As the rules said, you've won the game!"</p>
+				<p class='text'>"Finally!", you say joyfully. "But shouldn't you have a change to even out?"</p>
+				<p class='text'>"Nah, I'm actually already a bit late..." he says. "I should get going. Good night!"</p>
+				<button onclick='switchPanel(72,13)'>You watch the ghost disappear</button>
+			</div>
+			<div class="story" id="panel73">
+				<p class='text'>"The right answer was moon," he reveals. "Well, you still have a chance to win if I don't get the next one right, so ask your best riddle now."</p>
+				<p class='text'>"Of course. I'll have to think of something tricky..."</p>
+				<select>
+					<option onclick='tieGS(1)'>"What kind of tree is carried in your hand?"</option>
+					<option onclick='tieGS(2)'>"What has Eighty-eight keys but cannot open a single door?"</option>
+					<option onclick='tieGS(3)'>"What is black and white and red all over?"</option>
+				</select>
+			</div>
+			<div class="story" id="panel74">
+				<p class='text'>"Finally I know the answer! It's a palm tree!" he rejoys.</p>
+				<p class='text'>"That's right!" you tell him. "You've win the game, my friend!"</p>
+				<p class='text'>"It was a good game, although admittedly a bit embarassing," he says. "Anyhow, it's getting late, I should be going. Good night!"</p>
+				<button onclick='switchPanel(74,13)'>You watch the ghost disappear</button></p>
+			</div>
+			<div class="story" id="panel75">
+				<p class='text'>"It's a palm tree!" he rejoys.</p>
+				<p class='text'>"That's right!" you tell him. "You've win the game, my friend!"</p>
+				<p class='text'>"It was a good game, we both did amazingly well," he says. "Anyhow, it's getting late, I should be going. Good night!"</p>
+				<button onclick='switchPanel(75,13)'>You watch the ghost disappear</button></p>
+			</div>
+			<div class="story" id="panel76">
+				<p class='text'>"Finally I know the answer! It's a piano!" he rejoys.</p>
+				<p class='text'>"That's right!" you tell him. "You've win the game, my friend!"</p>
+				<p class='text'>"It was a good game, although admittedly a bit embarassing," he says. "Anyhow, it's getting late, I should be going. Good night!"</p>
+				<button onclick='switchPanel(76,13)'>You watch the ghost disappear</button></p>
+			</div>
+			<div class="story" id="panel77">
+				<p class='text'>"It's a piano!" he rejoys.</p>
+				<p class='text'>"That's right!" you tell him. "You've win the game, my friend!"</p>
+				<p class='text'>"It was a good game, we both did amazingly well," he says. "Anyhow, it's getting late, I should be going. Good night!"</p>
+				<button onclick='switchPanel(77,13)'>You watch the ghost disappear</button></p>
+			</div>
+			<div class="story" id="panel78">
+				<p class='text'>"Finally I've read the book and know the answer! It's a blushing zebra!" he rejoys.</p>
+				<p class='text'>"That's right!" you tell him. "You've win the game, my friend!"</p>
+				<p class='text'>"It was a good game, although admittedly a bit embarassing," he says. "Anyhow, it's getting late, I should be going. Good night!"</p>
+				<button onclick='switchPanel(78,13)'>You watch the ghost disappear</button></p>
+			</div>
+			<div class="story" id="panel79">
+				<p class='text'>"I've read the book. It's a blushing zebra!" he rejoys.</p>
+				<p class='text'>"That's right!" you tell him. "You've win the game, my friend!"</p>
+				<p class='text'>"It was a good game, we both did amazingly well," he says. "Anyhow, it's getting late, I should be going. Good night!"</p>
+				<button onclick='switchPanel(79,13)'>You watch the ghost disappear</button></p>
+			</div>
+			<div class="story" id="panel80">
+				<p class='text'>80</p>
 			</div>
 		</div>
 		<button onclick='quickGoTo(31)'>Back to 31</button>
