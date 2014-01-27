@@ -2,6 +2,17 @@ $(document).ready(function() {
 	$('#panel1').fadeIn(2000);
 });
 
+// Don't kill kids!
+function ageCheck() {
+	var age = document.getElementById('age-input').value;
+	$('.story').hide();
+	if (age < 18) {
+		$('#panel96').fadeIn(500);
+	} else {
+		$('#panel3').fadeIn(500);
+	}
+}
+
 //Switch to next panel without options
 function switchPanel(closeDiv, openDiv) {
 	var thisPanel = '#panel' + closeDiv;

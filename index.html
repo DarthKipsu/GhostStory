@@ -18,7 +18,7 @@
 			<div class="story" id="panel2">
 				<p class='text'>It's pitch black outside. Cold, dark, muddy. If you woudn't know better, you could hardly call it a winter. You get home from work, too late again, and hungry. At least it's friday, finally!</p>
 				<p class='text'>As soon as you get settled inside, you feel as something's wrong. You feel like you're not alone - and you're right.</p>
-				<button onclick='switchPanel(2,3)'>Look behind you</button>
+				<button onclick='ageCheck()'>Look behind you</button>
 			</div>
 			<div class="story" id="panel3">
 				<p class='text'>You see a shape in the back of the living room, as pale as snow. It quivers and sneezes silently, looking at you with timid eyes.</p>
@@ -684,9 +684,13 @@
 				<button onclick='window.location.reload()'>Go again!</button>
 			</div>
 			<div class="story" id="panel96">
-				<p class='text'>empty</p>
+				<p class='text'>You see a shape in the back of the living room, as pale as snow. It quivers and sneezes silently, looking at you with timid eyes.</p>
+				<p class='text'>There should be no one in the house except for you and you've never seen this person before in your life anyway. What will you do?</p>
+				<select>
+					<option onclick='switchPanel(3,4)'>Shout out of fright "How did you get here?"</option>
+					<option onclick='switchPanel(3,6)'>Ask him if he feels alright</option>
+				</select>
 			</div>
 		</div>
-		<button onclick='quickGoTo(5)'>Back to 5</button>
 	</body>
 </html>
