@@ -42,6 +42,44 @@ function addMyName() {
 	};
 };
 
+// Keep track of user and ghost hitpoints for fight game
+var userHitPoints = 100;
+var ghostHitPoints = 100;
+
+// Try to dodge
+function dodge() {
+	$('.story').hide();
+};
+
+// Try to hit
+function attack() {
+	ghostHitPoints -= Math.floor(Math.random()*20+8)
+	userHitPoints -= Math.floor(Math.random()*20+5)
+	$('.story').hide();
+	if (userHitPoints > 0) {
+		if (ghostHitPoints > 0) {
+			$('#panel89').fadeIn(500);
+		} else {
+			$('#panel90').fadeIn(500);
+		}
+	} else {
+		$('#panel91').fadeIn(500);
+	}
+	$('#userHealth').text(userHitPoints);
+	if (userHitPoints > 80) {
+		
+	} else if (userHitPoints > 60) {
+		
+	} else if (userHitPoints > 40) {
+		
+	} else if (userHitPoints >20) {
+		
+	} else {
+		
+	};
+	console.log('User: ' + userHitPoints + ', ghost: ' + ghostHitPoints)
+};
+
 // Keep score of the riddle game
 var userScore = 0;
 var ghostScore = 0;

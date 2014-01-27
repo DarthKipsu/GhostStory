@@ -38,6 +38,10 @@
 			<div class="story" id="panel5">
 				<p class='text'>You try to hit him with the first thing you could reach - a broom. His fast though and after your swing, you feel the whole house shake a bit.</p>
 				<p class='text'><span class="scream">"SKRIIIIEEEEK"</span> he screams with a high pitch, raising your hackles up.</p>
+				<select>
+					<option onclick='attack()'>Swing the broom again</option>
+					<option onclick='dodge()'>Dodge and try to run</option>
+				</select>
 			</div>
 			<div class="story" id="panel6">
 				<p class='text'>"Are you alright?" you ask the little man.</p>
@@ -643,12 +647,21 @@
 				</select>
 			</div>
 			<div class="story" id="panel89">
-				<p class='text'>empty</p>
+				<p class='text'>You manage to hit him, but his fast! He glides on your other side and pushes you on the ground while passing you.</p>
+				<p class='text'>You feel the hit, you're at about <span id="userHealth"></span>% of your normal energy.</p>
+				<button class="small" onclick='attack()'>HIT AGAIN!</button>
+				<button class="small" onclick='dodge()'>Try to run away</button>
 			</div>
 			<div class="story" id="panel90">
+				<p class='text'>The ghost is dead!</p>
+			</div>
+			<div class="story" id="panel91">
+				<p class='text'>You're dead!</p>
+			</div>
+			<div class="story" id="panel92">
 				<p class='text'>empty</p>
 			</div>
 		</div>
-		<button onclick='quickGoTo(31)'>Back to 31</button>
+		<button onclick='quickGoTo(5)'>Back to 5</button>
 	</body>
 </html>
