@@ -21,7 +21,7 @@ function switchPanel(closeDiv, openDiv) {
 	$(nextPanel).fadeIn(500);
 };
 
-// For quickly going to desired panel while working with the game
+// Go to about the game screen
 function quickGoTo(newPanel) {
 	var panel = '#panel' + newPanel;
 	$('.story').hide();
