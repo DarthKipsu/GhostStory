@@ -647,18 +647,43 @@
 				</select>
 			</div>
 			<div class="story" id="panel89">
-				<p class='text'>You manage to hit him, but his fast! He glides on your other side and pushes you on the ground while passing you.</p>
+				<p class='text' id="hit"></p>
 				<p class='text'>You feel the hit, you're at about <span id="userHealth"></span>% of your normal energy.</p>
 				<button class="small" onclick='attack()'>HIT AGAIN!</button>
 				<button class="small" onclick='dodge()'>Try to run away</button>
 			</div>
 			<div class="story" id="panel90">
-				<p class='text'>The ghost is dead!</p>
+				<p class='text'>You use all your remaining force for the final blow and this time manage to drop him for good.</p>
+				<p class='text'>The intruder falls to the floor and accompanying with a faint glow, his transparent body dissappears.</p>
+				<button onclick='switchPanel(90,95)'>Put the broom away</button>
 			</div>
 			<div class="story" id="panel91">
+				<p class='text'>You should have known when to stop.</p>
 				<p class='text'>You're dead!</p>
+				<button onclick='window.location.reload()'>Go again!</button>
 			</div>
 			<div class="story" id="panel92">
+				<p class='text'>You have no idea where the thing came but you aren't going to stay to find out. You throw the broom off your hands and run for the door.</p>
+				<p class='text'>Once you're outside, you still continue to run for a bit before you look behind.</p>
+				<button onclick='switchPanel(92,94)'>There's no one there.</button>
+			</div>
+			<div class="story" id="panel93">
+				<p class='text'>You try to get out of the house, but while you turn for the front door, the translucent little man hits you in the legs falling you down.</p>
+				<p class='text'>You feel the hit, you're at about <span id="runnerHealth"></span>% of your normal energy.</p>
+				<button class="small" onclick='attack()'>HIT HIM BACK!</button>
+				<button class="small" onclick='dodge()'>Try to run again</button>
+			</div>
+			<div class="story" id="panel94">
+				<p class='text'>You sleep the night over at a friends house and when you return the next day, the house is empty. Even today, you have no idea what happened and why you were attacked.</p>
+				<p class='text'>You wonder if it was all just a dream...</p>
+				<button onclick='window.location.reload()'>Go again!</button>
+			</div>
+			<div class="story" id="panel95">
+				<p class='text'>Even today, you have no idea why the ghost attacked you and if you had done something to provoke it. You haven't seen other ghosts since or anything else unusuall in your life.</p>
+				<p class='text'>You wonder if it was all just a dream...</p>
+				<button onclick='window.location.reload()'>Go again!</button>
+			</div>
+			<div class="story" id="panel96">
 				<p class='text'>empty</p>
 			</div>
 		</div>

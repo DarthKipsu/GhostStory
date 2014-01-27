@@ -46,9 +46,30 @@ function addMyName() {
 var userHitPoints = 100;
 var ghostHitPoints = 100;
 
-// Try to dodge
+// Try to run away, it's easier if you haven't hit the ghost much
 function dodge() {
+	userHitPoints -= Math.floor(Math.random()*20+5)
+	var roll = Math.random()
 	$('.story').hide();
+	if (ghostHitPoints > 70) {
+		if (roll > 0.40) {
+			// you escape
+			$('#panel92').fadeIn(500);
+		} else {
+			// you can't escape
+			$('#panel93').fadeIn(500);
+		};
+	} else if (ghostHitPoints > 30) {
+		if (roll > 0.7) {
+			$('#panel92').fadeIn(500);
+		} else {
+			$('#panel93').fadeIn(500);
+		};
+	} else {
+		$('#panel93').fadeIn(500);
+	};
+	$('#runnerHealth').text(userHitPoints);
+	console.log('Ghost hits: ' + ghostHitPoints + ', random number: ' + roll)
 };
 
 // Try to hit
@@ -61,21 +82,35 @@ function attack() {
 			$('#panel89').fadeIn(500);
 		} else {
 			$('#panel90').fadeIn(500);
-		}
+		};
 	} else {
 		$('#panel91').fadeIn(500);
-	}
+	};
 	$('#userHealth').text(userHitPoints);
 	if (userHitPoints > 80) {
-		
+		$('#hit').text('You manage to hit him, but his fast! He glides on your \
+			other side and pushes you on the ground while passing you.');
+	} else if (userHitPoints > 70) {
+		$('#hit').text('You swing the broom at him and land a hit, but he \
+			pushes the broom right back at you with a force.');
 	} else if (userHitPoints > 60) {
-		
+		$('#hit').text('You storm him with the broom and it seems to work. He \
+			tumbles to the ground, but manages to find something there to throw at you!');
+	} else if (userHitPoints > 50) {
+		$('#hit').text('You hit him again, just slightly catching him, moving fast \
+			around the room. He strikes you from the side.');
 	} else if (userHitPoints > 40) {
-		
-	} else if (userHitPoints >20) {
-		
+		$('#hit').text('You clash the broom at him, hitting him in the legs. \
+			He doesn\'t seem to be giving up and gets at you again, hitting you to the shoulder.');
+	} else if (userHitPoints > 30) {
+		$('#hit').text('You try another punch towards him, holding on to the broom \
+			tightly. He pushes the broom back and hits you in the stomach.');
+	} else if (userHitPoints > 20) {
+		$('#hit').text('You\'re starting to feel frail, but you take another shot \
+			at him. He bunches back again weakly and looks exhausted.');
 	} else {
-		
+		$('#hit').text('You\'re shaky from the last hit, but you take another swing \
+			at him. You nearly miss him and he punches you with all his remaining force.');
 	};
 	console.log('User: ' + userHitPoints + ', ghost: ' + ghostHitPoints)
 };
