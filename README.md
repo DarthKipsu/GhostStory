@@ -1,17 +1,17 @@
 - GhostStory JavaScript game -
 ===
 
+[You can preview the game here!] (http://darth.kipsu.fi/GhostStory/)
+
 This is my first JavaScript game. It has three different phases, based on user's actions:
 
-Storytelling phase
----
+### Storytelling phase
 
 A short story, that advances based on users selection. Uses users name to address the user and adds some text between html span tags based on the users name.
 
 **Remarks:** I think this phase of the game is quite pointless. I did it to learn how to make the panels change and how to give the user an option on how the story proceeds. All this could have been learned by doing just the next two phases though! But I guess it was a shoft start on this thing.
 
-Attack phase
----
+### Attack phase
 
 The user gets scared of the ghost and accidentally attacks it. He/she can choose to continue to attack the ghost or try to run from it. Both user and ghost start with 100hp and the user has to either kill the ghost or run from it before his/her hp runs to 0.
 
@@ -25,8 +25,7 @@ I also made it so that if you set your users age below 18, then you don't get to
 
 **Remarks:** I'm quite happy with this phase of the game. It was the last one I did and I was getting somewhat bored with adding content to the game, so I managed to keep it nice and simple.
 
-Riddle phase
----
+### Riddle phase
 
 If the user is nice to the ghost, they may start a game of riddles. This phase the user gets a riddle first and can answer whatever he or she likes to. The game cleans the answer from extra spaces and articles a/an and then checks if the answer is found in an array of right answers. Some riddles only have one answer, but some have a list of synonyms.
 
