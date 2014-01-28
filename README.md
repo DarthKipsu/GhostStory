@@ -21,6 +21,8 @@ Escaping is also based on chance, the user has a better chace of escaping, if th
 
 All the attacking happens in one panel, unlike the other phases of the game. It uses jQuery *.text()* method to tell the user what has happened.
 
+I also made it so that if you set your users age below 18, then you don't get to play this phase, because we don't want to prompt violence against kids after all!
+
 **Remarks:** I'm quite happy with this phase of the game. It was the last one I did and I was getting somewhat bored with adding content to the game, so I managed to keep it nice and simple.
 
 Riddle phase
